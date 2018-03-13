@@ -41,19 +41,14 @@ var path = {
 };
 
 
-gulp.task('browser-sync', function() {
-	browsersync({
-		server: {
-			baseDir: './build'
-		},
-		notify: false,
-		// host: localhost,
-		// port: 8080,
-		// open: false,
-		// tunnel: true,
-		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
-	})
-});
+var config = {
+    server: {
+        baseDir: "./build"
+    },
+//    tunnel: true,
+//    host: 'localhost',
+    port: 8080,
+};
 //
 // gulp.task('html:build', function () {
 // 	gulp.src('app/test/*.html')
@@ -153,4 +148,5 @@ gulp.task('webserver', function () {
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
+
 gulp.task('default', ['build', 'webserver', 'watch']);
