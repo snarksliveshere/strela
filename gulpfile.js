@@ -62,25 +62,44 @@ gulp.task('css', function () {
         .pipe(browserSync.stream());
 });
 
+// сборка для bootstrap
+gulp.task('boot', function () {
+    gulp.src(path.src.style)
+        .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
+        .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
+        .pipe(gulp.dest(path.build.css)) //И в build
+        .pipe(browserSync.stream());
+});
 gulp.task('image:build', function () {
     gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
         .pipe(gulp.dest(path.build.img)) //И бросим в build
         .pipe(browserSync.stream());
 });
 gulp.task('include-watch', ['fileinclude'], reload);
-
-gulp.task('default', ['fileinclude', 'css'], function () {
+gulp.task('clean', function (cb) {
+    rimraf('./build', cb);
+});
+gulp.task('default', ['fileinclude', 'css', 'image:build'], function () {
     // serve files from the build folder
     browserSync.init({
         server: {
-            baseDir: "./build/"
-        }
+            baseDir: "./build/",
+            routes: {
+                "/bower_components": "bower_components"
+            }
+        },
+		files: 'strela.local'
     });
     // watch files and run tasks
     gulp.watch("app/**/*.html", ['include-watch']);
