@@ -1,3 +1,6 @@
 /node_modules
 /.idea/
-/build/
+/build/fonts/
+/build/img/
+/build/index.html
+
