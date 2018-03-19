@@ -1,7 +1,28 @@
 .footer {
   background-color: $gray_color;
+  .address {
+    border-top:1px solid #fff;
+    @include media-breakpoint-up(md) {
+      border-left:1px solid #fff;
+      border-top:none;
+    }
+  }
+  .add_head
+  {
+    margin-bottom: 15px;
+  }
+}
+.footer_logo {
+  @include media-breakpoint-up(md) {
+    text-align: right;
+  }
 }
 .footer_floor {
   border-top:1px solid $main_color;
   background-color: #fff;
+  @include media-breakpoint-up(md) {
+    background-color: $gray_color;
+  }
+
 }
+

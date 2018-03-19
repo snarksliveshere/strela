@@ -1,8 +1,20 @@
 .footer {
-  ul {
-    li {
-      &:before {
+  ul
+  {
+    li
+    {
+      &:before
+      {
         content: '';
+      }
+      a
+      {
+        color: $content_color;
+        &:hover
+        {
+          color: $main_color;
+          text-decoration: none;
+        }
       }
 
     }
