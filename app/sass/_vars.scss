@@ -1,4 +1,6 @@
-$default-font: "roboto-example", sans-serif;
+$default-font: "Raleway", sans-serif;
+$open_sans: "Open Sans", sans-serif;
+$raleway: "Raleway", sans-serif;
 $accent: orange;
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
@@ -8,3 +10,15 @@ $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
 
 $gutter: $grid-gutter-width;
+
+
+// colors
+$content_color: #000;
+$main_color: #2f80ed;
+$gray_color: #ebebeb;
+$gray_text_color: #a7a7a7;
+$pale_blue_color: #d1f0fd;
+
+$images : '../images/';
+
+

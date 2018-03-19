@@ -54,10 +54,10 @@ gulp.task('fileinclude', function () {
 gulp.task('css', function () {
     gulp.src(path.src.style)
         .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
-        .pipe(rename({ suffix: '.min', prefix : '' }))
+        // .pipe(rename({ suffix: '.min', prefix : '' }))
 		.pipe(autoprefixer())
 		.pipe(gcmq())
-        .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
+        // .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(browserSync.stream());
 });
@@ -95,13 +95,11 @@ gulp.task('default', ['fileinclude', 'css', 'image:build'], function () {
     browserSync.init({
         server: {
             baseDir: "./build/",
-            routes: {
-                "/bower_components": "bower_components"
-            }
         },
 		files: 'strela.local'
     });
     // watch files and run tasks
     gulp.watch("app/**/*.html", ['include-watch']);
     gulp.watch("app/sass/**/*.scss", ['css']);
+    gulp.watch("app/img/**/*.*", ['image:build']);
 });

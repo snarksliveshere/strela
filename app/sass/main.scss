@@ -1,6 +1,8 @@
+@import "../libs/bootstrap/scss/mixins/breakpoints";
 @import "vars";
-//@import "fonts";
 //@import "libs";
+//@import "fonts";
+
 @import "base/index";
 @import "layout/index";
 @import "navigation/index";

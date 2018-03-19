@@ -1,1 +1,87 @@
-$color: #fff;
+// media
+//
+//@include media-breakpoint-up(xs) { ... }
+//@include media-breakpoint-up(sm) { ... }
+//@include media-breakpoint-up(md) { ... }
+//@include media-breakpoint-up(lg) { ... }
+//@include media-breakpoint-up(xl) { ... }
+//
+//// Example usage:
+//@include media-breakpoint-up(sm) {
+//  .some-class {
+//    display: block;
+//  }
+
+
+// headers
+
+%h1{
+  font-size: 18px;
+  font-weight:900;
+  color: $content_color;
+  position: relative;
+  line-height: 24px;
+  &:after {
+    content:"";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $main_color;
+    position: absolute;
+    bottom: -10px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 25px;
+  }
+}
+%h2 {
+  font-size: 16px;
+  font-weight:700;
+  color: $content_color;
+  position: relative;
+  line-height: 24px;
+  &:after {
+    content:"";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $main_color;
+    position: absolute;
+    bottom: -10px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+  }
+}
+%h3 {
+  font-size: 16px;
+  font-weight:700;
+  color: $content_color;
+  position: relative;
+  line-height: 24px;
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+  }
+}
+%add_head {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+}
+
+// texts
+%text_block {
+  font-size: 14px;
+  font-family: $open_sans;
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+  }
+}
+
+
+%color {
+  color: $main_color;
+}

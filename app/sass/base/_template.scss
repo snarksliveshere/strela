@@ -1,45 +1,91 @@
-html, body {
-  height: 100%;
+.opensans {
+  font-family: $open_sans;
 }
-body {
-  font-size: 16px;
-  min-width: 320px;
-  position: relative;
-  line-height: 1.65;
-  font-family: $default-font;
-  overflow-x: hidden;
+// headers
+.h1 {
+  @extend %h1;
 }
-
-input, textarea {
-  border: #666 1px solid;
-  outline: none;
-  &:focus:required:invalid {
-    border-color: red;
-  }
-  &:required:valid {
-    border-color: green;
-  }
-
+.h2 {
+  @extend %h2;
 }
-.img-responsive {
+.add_head {
+  @extend %add_head;
+}
+// texts
+.text_block {
+  @extend %text_block;
+}
+.pale_bg {
+  background-color: $pale_blue_color;
+}
+.table_wrapper {
   display: block;
-  max-width: 100%;
-  height: auto;
-
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
 }
-.tac {
+
+table {
+  border-collapse: collapse;
+  font-family: $open_sans;
+
+  thead {
+    tr {
+      background-color: $pale_blue_color;
+    }
+    th,td {
+      font-size: 14px;
+      color:$main_color;
+      font-weight: bold;
+    }
+  }
+  tr {
+
+  }
+  td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    position: relative;
+    &:before {
+      content: '-';
+      font-weight: 900;
+      color: $main_color;
+      position: absolute;
+      left: -10px;
+    }
+  }
+}
+
+
+.ta-right {
+  text-align: right;
+  &:after {
+    right: 0;
+  }
+}
+.ta-center {
   text-align: center;
+  &:after {
+    right:0;
+    left:0;
+    margin: 0 auto;
+  }
 }
-.fwb {
-  font-weight: bold;
+.half_line {
+  &:after {
+    width: 30px;
+  }
 }
-.red {
-  color: red;
+.remark {
+  font-size: 14px;
+  color: $gray_text_color;
 }
-.spy {
-  display: none;
-}
-.test {
-  font-size: 20px;
-}
-
