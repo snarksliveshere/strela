@@ -1,6 +1,30 @@
-<div class="container-fluid">
-    @@include('top_menu.html')
+<div class="header">
+    <div class="header__top d-none d-md-block">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    @@include('top_menu.html')
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-auto header__address">г. Москва, Зельев пер-к, д.11</div>
+                        <div class="col header_search">
+                            @@include('header_search.html')
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="header__base">
+        <div class="header__logo">
+
+        </div>
+    </div>
+
 </div>
+
 
 <div class="h1 ta-center semibold half_line">HEADER</div>
 <h2 class="h2">header 2 gu<i class="fas fa-angle-right"></i></h2>
