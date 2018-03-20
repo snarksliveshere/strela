@@ -1,0 +1,20 @@
+.header
+{
+    &__menu
+    {
+        background-color: $main_color;
+        a
+        {
+            color:#fff;
+            font-weight:600;
+            display: block;
+            text-align: center;
+
+            &:hover
+            {
+                background-color: #fff;
+                color: $main_color;
+            }
+        }
+    }
+}

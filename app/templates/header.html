@@ -18,8 +18,31 @@
         </div>
     </div>
     <div class="header__base">
-        <div class="header__logo">
+        <div class="container">
+            <div class="row">
+                <div class="header__logo col-6 col-md-3">
+                    <img src="/img/logo.png" alt="голубая стрела">
+                </div>
+                <div class="col-6 d-block d-md-none">
+                    Корзина и див для мобильного меню
+                </div>
+                <div class="col-12 col-md-5">
+                    Продажа рекламно-сувенирной продукции онлайн по всей России
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="header__address d-block d-md-none">г. Москва, Зельев пер-к, д.11</div>
+                    <div class="col-12 col-md-10">Кнопка с вызовом телефон</div>
+                    + корзина, которая на md здесь, а на адаптиве - сверху
 
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="header__menu d-none d-md-block">
+        <div class="container">
+            @@include('header_menu.html')
         </div>
     </div>
 
