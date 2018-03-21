@@ -2,7 +2,7 @@
 /.idea/
 /build/fonts/
 /build/img/
-/build/index.html
+/build/*.html
 /build/css/main.css
 
 
