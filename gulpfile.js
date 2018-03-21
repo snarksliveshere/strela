@@ -13,6 +13,7 @@ var     gulp          = require('gulp'),
 		notify        = require("gulp-notify"),
 		rimraf		  = require("rimraf"),
 		fileinclude   = require('gulp-file-include'),
+        changed       = require('gulp-change'),
 		reload		  =	browserSync.reload;
 
 var path = {
@@ -53,6 +54,7 @@ gulp.task('fileinclude', function () {
 
 gulp.task('css', function () {
     gulp.src(path.src.style)
+        .pipe(changed(path.build.css))
         .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
         // .pipe(rename({ suffix: '.min', prefix : '' }))
 		.pipe(autoprefixer())
