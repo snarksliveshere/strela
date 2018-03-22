@@ -34,6 +34,13 @@
     font-size: 25px;
   }
 }
+@mixin pad-equal($py:10px,$px:0,$pymd:15px,$pxmd:0) {
+  padding:$py $px;
+  @include media-breakpoint-up(md) {
+    padding:$pymd $pxmd;
+  }
+}
+
 %h2 {
   font-size: 16px;
   font-weight:700;
@@ -53,10 +60,10 @@
     font-size: 18px;
   }
 }
-%h3 {
+@mixin h3($c_color:$content_color) {
   font-size: 16px;
   font-weight:700;
-  color: $content_color;
+  color: $c_color;
   position: relative;
   line-height: 24px;
   @include media-breakpoint-up(lg) {

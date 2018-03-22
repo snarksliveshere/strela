@@ -1,0 +1,33 @@
+//BUTTONS
+%button_border {
+    border-radius: 8px;
+}
+%button_padding {
+    padding: 5px 30px;
+}
+%button_shadow {
+    box-shadow: 0px 10px 61px -10px rgba(0,0,0,0.3);
+}
+%button_gradient {
+    background: #2f80ed;
+    background: linear-gradient(135deg, #2f80ed 0%,#00a9f5 100%);
+    border: none;
+    color: #fff;
+}
+@mixin button($b_color:$main_color,$bg:transparent,$fz:18px,$fw:700) {
+    @extend %button_padding;
+    @extend %button_border;
+    @extend %button_shadow;
+    color: $b_color;
+    font-size: $fz;
+    font-weight:$fw;
+    background-color: $bg;
+    border: 2px solid $b_color;
+}
+//end od buttons
+
+
+//block shadow
+%block_shadow {
+    box-shadow: 2px 4px 59px 3px rgba(0,0,0,0.2);
+}

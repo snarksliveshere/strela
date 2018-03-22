@@ -41,7 +41,7 @@ var path = {
 };
 
 gulp.task('fileinclude', function () {
-    gulp.src('app/html/*.html')
+    gulp.src('app/html/**/*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: 'app/templates/'

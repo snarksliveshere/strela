@@ -3,13 +3,13 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-auto">
-                    @@include('top_menu.html')
+                    @@include('menu/top_menu.html')
                 </div>
                 <div class="col">
                     <div class="row">
                         <div class="col-auto header__address">г. Москва, Зельев пер-к, д.11</div>
                         <div class="col header_search">
-                            @@include('header_search.html')
+                            @@include('header/header_search.html')
                         </div>
                     </div>
                 </div>
@@ -20,12 +20,15 @@
     <div class="header__base">
         <div class="container">
             <div class="row">
-                <div class="header__logo col-6 col-md-3">
-                    <img src="/img/logo.png" alt="голубая стрела">
-                </div>
-                <div class="col-6 d-block d-md-none">
-                    Корзина и див для мобильного меню
-                </div>
+                <!--<div class="row no-gutters header__mobile-top bottom_border-blue">-->
+                    <div class="header__logo col-6 col-md-3 bottom_border-blue">
+                        <img src="/img/logo.png" alt="голубая стрела" class="img-responsive">
+                    </div>
+                    <div class="col-6 d-block d-md-none bottom_border-blue">
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-align-justify"></i>
+                    </div>
+                <!--</div>-->
                 <div class="col-12 col-md-5">
                     Продажа рекламно-сувенирной продукции онлайн по всей России
                 </div>
@@ -42,7 +45,7 @@
     </div>
     <div class="header__menu d-none d-md-block">
         <div class="container">
-            @@include('header_menu.html')
+            @@include('menu/header_menu.html')
         </div>
     </div>
 </div>
