@@ -127,12 +127,26 @@ ul {
 .menu a:hover {
     text-decoration: none;
 }
+i {
+    color: $main_color;
+}
+.text_gradient {
+    position: relative;
+    &:after
+    {
+        @extend %text_gradient;    
+    }
+    
+}
 
 .button {
     @include button;
 }
 
 button.gradient {
+    @extend %button_gradient;
+}
+.gradient {
     @extend %button_gradient;
 }
 
@@ -143,3 +157,4 @@ button.gradient {
 .button-blue {
     @include button($main_color, #fff);
 }
+

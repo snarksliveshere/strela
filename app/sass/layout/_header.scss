@@ -1,9 +1,32 @@
 
 .header
 {
-      &__top
-      {
-        border-bottom: 3px solid $blue_color;
-      }
+    &__logo
+    {
+        @include pad-equal;
+    }
+    &__top
+    {
+    border-bottom: 3px solid $blue_color;
+    }
+    &__disclamer
+    {
+        font-size: 20px;
+        color: $main_color;
+    }
+    &__mobile
+    {
+        &-icons
+        {
+            font-size: 20px;
+            @include pad-equal;
+            color: $main_color;
+        }
+        &-separator
+        {
+            box-shadow: -15px 0px 56px 0px rgba(47,128,237,0.3);
+        }
+    }
+
 
 }
