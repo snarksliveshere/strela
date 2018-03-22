@@ -123,9 +123,19 @@ ul {
 .bottom_border-blue {
     border-bottom: 3px solid $main_color;
 }
-
-.menu a:hover {
-    text-decoration: none;
+ul {
+    margin-bottom: 0;
+}
+.menu
+{
+    a
+    {
+        color: #000;
+        &:hover
+        {
+            text-decoration: none;
+        }
+    }
 }
 i {
     color: $main_color;

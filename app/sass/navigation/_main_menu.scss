@@ -2,7 +2,15 @@
 {
     &__menu
     {
+
         background-color: $main_color;
+        ul
+        {
+            a
+            {
+                @include pad-equal;
+            }
+        }
         a
         {
             color:#fff;

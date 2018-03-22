@@ -4,6 +4,12 @@
     &__logo
     {
         @include pad-equal;
+        &.bottom_border-blue
+        {
+            @include media-breakpoint-up(lg) {
+                border:none;
+            }
+        }
     }
     &__top
     {
@@ -13,6 +19,12 @@
     {
         font-size: 20px;
         color: $main_color;
+    }
+    &__address
+    {
+        font-size: 14px;
+        font-weight: bold;
+        @include marg-top($mtmd:5);
     }
     &__mobile
     {
@@ -25,6 +37,16 @@
         &-separator
         {
             box-shadow: -15px 0px 56px 0px rgba(47,128,237,0.3);
+        }
+    }
+    &_search
+    {
+        a
+        {
+            @extend %block_shadow;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
     }
 

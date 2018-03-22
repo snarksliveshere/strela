@@ -34,11 +34,65 @@
     font-size: 25px;
   }
 }
-@mixin pad-equal($py:10px,$px:0,$pymd:15px,$pxmd:0) {
-  padding:$py $px;
-  @include media-breakpoint-up(md) {
-    padding:$pymd $pxmd;
+@mixin pad-equal($py:10,$px:0,$pysm:15,$pxsm:0,$pymd:15,$pxmd:0,$pylg:15,$pxlg:0,$pyxl:15,$pxxl:0) {
+  padding:#{$py}px #{$px}px;
+  @include media-breakpoint-up(sm) {
+    padding:#{$pysm}px #{$pxsm}px;
   }
+  @include media-breakpoint-up(md) {
+    padding:#{$pymd}px #{$pxmd}px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding:#{$pylg}px #{$pxlg}px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding:#{$pyxl}px #{$pxxl}px;
+  }
+}
+@mixin pad-top($pt:0,$ptsm:0,$ptmd:0,$ptlg:0,$ptxl:0) {
+  padding-top:#{$pt}px;
+  @include media-breakpoint-up(sm) {
+    padding-top:#{$ptsm}px;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top:#{$ptmd}px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top:#{$ptlg}px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top:#{$ptxl}px;
+  }
+}
+@mixin marg-equal($my:10,$mx:0,$mysm:15,$sm:0,$mymd:15,$md:0,$mylg:15,$lg:0,$myxl:15,$xl:0) {
+  margin:#{$my}px #{$mx}px;
+  @include media-breakpoint-up(sm) {
+    margin:#{$mysm}px #{$mxsm}px;
+  }
+  @include media-breakpoint-up(md) {
+    margin:#{$mymd}px #{$mxmd}px;
+  }
+  //@include media-breakpoint-up(lg) {
+  //  margin:#{$mylg}px #{$mxlg}px;
+  //}
+  //@include media-breakpoint-up(xl) {
+  //  margin:#{$myxl}px #{$mxxl}px;
+  //}
+}
+@mixin marg-top($mt:0,$mtsm:0,$mtmd:0,$mtlg:0,$mtxl:0) {
+  margin-top:#{$mt}px;
+  @include media-breakpoint-up(sm) {
+    margin-top:#{$mtsm}px;
+  }
+  @include media-breakpoint-up(md) {
+    margin-top:#{$mtmd}px;
+  }
+  //@include media-breakpoint-up(lg) {
+  //  margin-top:#{$mtlg}px;
+  //}
+  //@include media-breakpoint-up(xl) {
+  //  margin-top:#{$mtxl}px;
+  //}
 }
 
 %h2 {
@@ -91,4 +145,20 @@
 
 %color {
   color: $main_color;
+}
+
+//Triangle
+@mixin triangle_down($z-index:1,$color:$main_color,$btm:-15,$brd_transparent:10,$brd_solid:15) {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: #{$btm}px;
+  margin: 0 auto;
+  border: #{$brd_transparent}px solid transparent;
+  border-top: #{$brd_solid}px solid $color;
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: $z-index;
 }

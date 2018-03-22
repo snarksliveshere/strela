@@ -1,0 +1,28 @@
+.header
+{
+    &__top
+    {
+        ul
+        {
+            a
+            {
+                @include pad-equal;
+                display: block;
+                font-size: 14px;
+                font-weight: 600;
+                position: relative;
+                &:hover
+                {
+                    &:before
+                    {
+                        @include triangle_down(1,$main_color,-20,10,10);
+                    }
+                    &:after
+                    {
+                        @include triangle_down(2,#fff,-16,8,8);
+                    }
+                }
+            }
+        }
+    }
+}
