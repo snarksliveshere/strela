@@ -3,10 +3,9 @@
 {
     &__logo
     {
-        @include pad-equal;
         &.bottom_border-blue
         {
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(md) {
                 border:none;
             }
         }
@@ -14,13 +13,23 @@
     &__basket
     {
         font-size: 20px;
-        @extend %button_gradient;
+        color: $main_color;
         padding: 5px 11px;
         border-radius: 8px;
         margin-left: 15px;
-        i
-        {
-            color: #ffffff;
+        position: absolute;
+        top: -187px;
+        right: 28px;
+        @include media-breakpoint-up(md) {
+            position: static;
+            background: $main_color;
+            background: linear-gradient(135deg, $main_color 0%,#00a9f5 100%);
+            border: none;
+            i
+            {
+                color:#fff;
+
+            }
         }
     }
     &__top
@@ -40,15 +49,10 @@
     }
     &__mobile
     {
-        &-icons
-        {
-            font-size: 20px;
-            @include pad-equal;
-            color: $main_color;
-        }
         &-separator
         {
-            box-shadow: -15px 0px 56px 0px rgba(47,128,237,0.3);
+            box-shadow: -20px 2px 36px -4px rgba(47, 128, 237, 0.3);
+            font-size: 20px;
         }
     }
     &_search
