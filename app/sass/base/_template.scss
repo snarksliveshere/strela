@@ -123,6 +123,8 @@ ul {
 .bottom_border-blue {
     border-bottom: 3px solid $main_color;
 }
+
+
 ul {
     margin-bottom: 0;
 }
@@ -168,3 +170,6 @@ button.gradient {
     @include button($main_color, #fff);
 }
 
+.black_color {
+    color:#000;
+}

@@ -6,11 +6,11 @@
                     @@include('menu/top_menu.html')
                 </div>
                 <div class="col no-gutters align-self-center">
-                    <div class="row">
+                    <div class="row justify-content-end">
                         <div class="col-auto header__address">
                             <i class="fas fa-map-marker-alt"></i>
                             <span> г. Москва, Зельев пер-к, д.11</span></div>
-                        <div class="col header_search">
+                        <div class="col-auto header_search">
                             @@include('header/header_search.html')
                         </div>
                     </div>
@@ -21,7 +21,7 @@
     </div>
     <div class="header__base">
         <div class="container">
-            <div class="row no-gutters">
+            <div class="row no-gutters align-items-center py-md-5">
                 <div class="header__logo col-6 col-md-3 bottom_border-blue">
                     <img src="/img/logo.png" alt="голубая стрела" class="img-responsive">
                 </div>
@@ -31,13 +31,18 @@
                         <div class="col-3 header__mobile-separator"><i class="fas fa-align-justify text_gradient"></i></div>
                     </div>
                 </div>
-                <div class="col-12 col-md-5 align-self-center">
-                    <div class="header__disclamer text_gradient">Продажа рекламно-сувенирной продукции онлайн по всей России</div>
+                <div class="col-12 col-md-5 text-center">
+                    <div class="header__disclamer text_gradient">Продажа рекламно-сувенирной<br>продукции онлайн по всей России</div>
                 </div>
                 <div class="col-12 col-md-4">
                     <div class="header__address d-block d-md-none">г. Москва, Зельев пер-к, д.11</div>
-                    <div class="col-12 col-md-10">Кнопка с вызовом телефон</div>
-                    + корзина, которая на md здесь, а на адаптиве - сверху
+                    <div class="col-12">
+                        <div class="row justify-content-end align-items-center">
+                            <a href="tel:+74955850690" class="col-auto button-white black_color opensans"><i class="fas fa-mobile-alt"></i> +7 (495) 585 06 90</a>
+                            <div class="col-auto header__basket"><i class="fas fa-shopping-cart"></i></div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>

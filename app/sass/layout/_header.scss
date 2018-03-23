@@ -11,6 +11,18 @@
             }
         }
     }
+    &__basket
+    {
+        font-size: 20px;
+        @extend %button_gradient;
+        padding: 5px 11px;
+        border-radius: 8px;
+        margin-left: 15px;
+        i
+        {
+            color: #ffffff;
+        }
+    }
     &__top
     {
     border-bottom: 3px solid $blue_color;
