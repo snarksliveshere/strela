@@ -1,0 +1,43 @@
+.iseeu_menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 80%;
+    display: none;
+    .menu
+    {
+        padding:10px 0;
+    }
+    a
+    {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .top_menu
+    {
+        background: #fff;
+        a
+        {
+            color: #000;
+            .active
+            {
+                color: $main_color;
+            }
+        }
+    }
+    .main_menu
+    {
+        @extend %menu_gradient;
+        padding:10px 15px;
+        a
+        {
+            color: #ffffff;
+            .active
+            {
+                color:#fff;
+            }
+        }
+    }
+
+}

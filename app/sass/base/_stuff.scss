@@ -14,6 +14,10 @@
     border: none;
     color: #fff;
 }
+%menu_gradient {
+    background: $another_blue;
+    background: linear-gradient(135deg, $another_blue 0%,$main_color 100%);
+}
 @mixin button($b_color:$main_color,$bg:transparent,$fz:18px,$fw:700) {
     @extend %button_padding;
     @extend %button_border;
