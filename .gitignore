@@ -4,3 +4,6 @@
 /build/img/
 /build/*.html
 /build/css/main.css
+/bash.exe.stackdump
+app/templates/modules/
+bash.exe.stackdump
