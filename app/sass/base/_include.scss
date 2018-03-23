@@ -149,7 +149,5 @@
 }
 
 %hover-lia {
-  @include media-breakpoint-up(md) {
-    background: $pale_blue_color;
-  }
+  background: $pale_blue_color;
 }

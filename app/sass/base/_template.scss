@@ -55,7 +55,7 @@ table {
 
     thead {
         tr {
-            background-color: $pale_blue_color;
+            @extend %hover-lia;
         }
         th, td {
             font-size: 14px;
