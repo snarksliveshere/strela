@@ -1,39 +1,4 @@
-// media
-//
-//@include media-breakpoint-up(xs) { ... }
-//@include media-breakpoint-up(sm) { ... }
-//@include media-breakpoint-up(md) { ... }
-//@include media-breakpoint-up(lg) { ... }
-//@include media-breakpoint-up(xl) { ... }
-//
-//// Example usage:
-//@include media-breakpoint-up(sm) {
-//  .some-class {
-//    display: block;
-//  }
 
-
-// headers
-
-%h1{
-  font-size: 18px;
-  font-weight:900;
-  color: $content_color;
-  position: relative;
-  line-height: 24px;
-  &:after {
-    content:"";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: $main_color;
-    position: absolute;
-    bottom: -10px;
-  }
-  @include media-breakpoint-up(lg) {
-    font-size: 25px;
-  }
-}
 @mixin pad-equal($py:10,$px:0,$pysm:15,$pxsm:0,$pymd:15,$pxmd:0,$pylg:15,$pxlg:0,$pyxl:15,$pxxl:0) {
   padding:#{$py}px #{$px}px;
   @include media-breakpoint-up(sm) {
@@ -94,7 +59,27 @@
   //  margin-top:#{$mtxl}px;
   //}
 }
+// headers
 
+%h1{
+  font-size: 18px;
+  font-weight:900;
+  color: $content_color;
+  position: relative;
+  line-height: 24px;
+  &:after {
+    content:"";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $main_color;
+    position: absolute;
+    bottom: -10px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 25px;
+  }
+}
 %h2 {
   font-size: 16px;
   font-weight:700;
@@ -161,4 +146,10 @@
   width: 0;
   height: 0;
   z-index: $z-index;
+}
+
+%hover-lia {
+  @include media-breakpoint-up(md) {
+    background: $pale_blue_color;
+  }
 }

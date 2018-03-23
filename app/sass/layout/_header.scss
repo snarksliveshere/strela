@@ -25,6 +25,10 @@
         position: absolute;
         top: -263px;
         right: 35px;
+        &.inner_pages
+        {
+            top: -47px;
+        }
         @include media-breakpoint-up(md) {
             position: static;
             background: $main_color;

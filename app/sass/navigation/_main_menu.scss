@@ -52,7 +52,7 @@
                     text-align: left;
                     &:hover
                     {
-                        background: $pale_blue_color;
+                        @extend %hover-lia;
                     }
                 }
                 .submenu

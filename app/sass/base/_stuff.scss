@@ -1,34 +1,4 @@
-//BUTTONS
-%button_border {
-    border-radius: 8px;
-}
-%button_padding {
-    padding: 5px 30px;
-}
-%button_shadow {
-    box-shadow: 0px 10px 61px -10px rgba(47,128,237,0.3);
-}
-%button_gradient {
-    background: $main_color;
-    background: linear-gradient(135deg, $main_color 0%,#00a9f5 100%);
-    border: none;
-    color: #fff;
-}
-%menu_gradient {
-    background: $another_blue;
-    background: linear-gradient(135deg, $another_blue 0%,$main_color 100%);
-}
-@mixin button($b_color:$main_color,$bg:transparent,$fz:18px,$fw:700) {
-    @extend %button_padding;
-    @extend %button_border;
-    @extend %button_shadow;
-    color: $b_color;
-    font-size: $fz;
-    font-weight:$fw;
-    background-color: $bg;
-    border: 2px solid $b_color;
-}
-//end of buttons
+// Gradients
 %text_gradient {
     background: linear-gradient(135deg, #2f80ed 0%,#00a9f5 100%);
     background: linear-gradient(135deg,rgba(255,255,255,0.7),rgba(255,255,255,0));
@@ -41,12 +11,53 @@
     content: '';
     display: block;
 }
-//block shadow
+%button_gradient {
+    background: $main_color;
+    background: linear-gradient(135deg, $main_color 0%,#00a9f5 100%);
+    border: none;
+    color: #fff;
+}
+%menu_gradient {
+    background: $another_blue;
+    background: linear-gradient(135deg, $another_blue 0%,$main_color 100%);
+}
+%left_menu_gradient {
+    @include media-breakpoint-up(md) {
+        background: $main_color;
+        background: linear-gradient(to right, $main_color 1%, $border-color-blue 100%);
+    }
+}
+
+// Shadows
+%button_shadow {
+    box-shadow: 0px 10px 61px -10px rgba(47,128,237,0.3);
+}
 %block_shadow {
     box-shadow: 2px 4px 59px 3px rgba(46,124,230,0.4);
 }
 %another_shadow {
     box-shadow: inset -1px 18px 51px -8px rgba(46,124,230,0.2);
 }
+//BUTTONS
+%button_border {
+    border-radius: 8px;
+}
+%button_padding {
+    padding: 5px 30px;
+}
+@mixin button($b_color:$main_color,$bg:transparent,$fz:18px,$fw:700) {
+    @extend %button_padding;
+    @extend %button_border;
+    @extend %button_shadow;
+    color: $b_color;
+    font-size: $fz;
+    font-weight:$fw;
+    background-color: $bg;
+    border: 2px solid $b_color;
+}
+//end of buttons
+
+
+
 
 
