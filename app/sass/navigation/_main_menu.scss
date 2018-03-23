@@ -17,6 +17,21 @@
         }
         .main_menu
         {
+            &>.dropmenu
+            {
+                &:hover
+                {
+                    &>.submenu
+                    {
+                        @extend %another_shadow;
+                        z-index: 2;
+                    }
+                    &:after
+                    {
+                        @include triangle_down(2,#fff,-30,15,15);
+                    }
+                }
+            }
             .submenu
             {
                 position: absolute;
