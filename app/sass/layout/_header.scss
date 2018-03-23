@@ -9,6 +9,11 @@
                 border:none;
             }
         }
+        @extend %block_shadow;
+        @include media-breakpoint-up(md)
+        {
+            box-shadow: none;
+        }
     }
     &__basket
     {
@@ -18,8 +23,8 @@
         border-radius: 8px;
         margin-left: 15px;
         position: absolute;
-        top: -187px;
-        right: 28px;
+        top: -263px;
+        right: 35px;
         @include media-breakpoint-up(md) {
             position: static;
             background: $main_color;
@@ -40,6 +45,10 @@
     {
         font-size: 20px;
         color: $main_color;
+        @include media-breakpoint-up(md)
+        {
+            text-align: center;
+        }
     }
     &__address
     {
