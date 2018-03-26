@@ -37,9 +37,6 @@ a {
     @extend %text_block;
 }
 
-.pale_bg {
-    background-color: $pale_blue_color;
-}
 
 .table_wrapper {
     display: block;
@@ -78,6 +75,10 @@ ul {
 }
 
 .content {
+    ul
+    {
+        padding: 10px;
+    }
     li {
         position: relative;
         &:before {
@@ -86,6 +87,7 @@ ul {
             color: $main_color;
             position: absolute;
             left: -10px;
+            top: -2px;
         }
     }
 }
@@ -105,7 +107,13 @@ ul {
         margin: 0 auto;
     }
 }
+.underline {
+    position: relative;
+    &:after {
+        @extend %underline;
+    }
 
+}
 .half_line {
     &:after {
         width: 30px;
@@ -144,6 +152,7 @@ ul {
 i {
     color: $main_color;
 }
+
 .text_gradient {
     position: relative;
     &:after
@@ -174,12 +183,20 @@ button.gradient {
 .button-blue {
     @include button($main_color, #fff);
 }
-
+.button-shadow {
+    @extend %button_shadow;
+}
+.block-shadow {
+    @extend %block_shadow;
+}
+.button-after {
+    @include button_after;
+}
 .black_color {
     color:#000;
 }
 .little_remark {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
 }
 .posa {
@@ -217,4 +234,24 @@ button.gradient {
 }
 .semibold {
     font-weight: 600;
+}
+.bg_pale {
+    @extend %hover-lia;
+}
+.ttu {
+    text-transform: uppercase;
+}
+.border_gradient {
+    @include border_gradient;
+}
+.another_blue {
+    color: $another_blue;
+}
+.hover-tdn {
+    &:hover {
+        text-decoration: none;
+    }
+}
+.pale_bg {
+    background-color: $pale_blue_color;
 }

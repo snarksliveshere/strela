@@ -6,7 +6,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 4%;
     right: 0;
     content: '';
     display: block;
@@ -27,16 +27,20 @@
         background: linear-gradient(to right, $main_color 1%, $border-color-blue 100%);
     }
 }
-
+@mixin border_gradient($first-color:$main_color,$second-color:$border-color-blue,$b-width:2,$direction:to right) {
+    border:#{$b-width}px solid $first-color;
+    border-image: linear-gradient($direction, $first-color 1%, $second-color 100%);
+    border-image-slice: 1;
+}
 // Shadows
 %button_shadow {
     box-shadow: 0px 10px 61px -10px rgba(47,128,237,0.3);
 }
 %block_shadow {
-    box-shadow: 2px 4px 59px 3px rgba(46,124,230,0.4);
+    box-shadow: 2px 4px 59px 3px rgba(46,124,230,0.2);
 }
 %another_shadow {
-    box-shadow: inset -1px 18px 51px -8px rgba(46,124,230,0.2);
+    box-shadow: inset -1px 18px 18px -8px rgba(46,124,230,0.2);
 }
 //BUTTONS
 %button_border {
@@ -45,17 +49,34 @@
 %button_padding {
     padding: 5px 30px;
 }
-@mixin button($b_color:$main_color,$bg:transparent,$fz:18px,$fw:700) {
+@mixin button($b_color:$main_color,$bg:#ffffff,$fz:18px,$fw:700) {
     @extend %button_padding;
     @extend %button_border;
-    @extend %button_shadow;
+    text-align: center;
     color: $b_color;
     font-size: $fz;
     font-weight:$fw;
     background-color: $bg;
-    border: 2px solid $b_color;
+    box-sizing: border-box;
+    position: relative;
+
+}
+@mixin button_after {
+    &:before {
+        content:'';
+        position: absolute;
+        z-index: -1;
+        width: 102%;
+        height: 112%;
+        top: -2px;
+        left: -1%;
+        display: block;
+        @extend %button_gradient;
+        @extend %button_border;
+    }
 }
 //end of buttons
+
 
 
 

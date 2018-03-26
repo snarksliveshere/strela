@@ -81,4 +81,45 @@ $(function() {
 
     } // end of Resize > 768
 
+    $('.aside_slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 99999,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+
+        ]
+    });
+
+    $(".fancybox").fancybox({
+       buttons: ['close']
+    });
+
 });
