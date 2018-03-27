@@ -16,6 +16,7 @@
             left: 0;
             right: 0;
             background-color: rgba(255,255,255,0.9);
+            padding-bottom: 15px;
             .button
             {
                 display: block;
@@ -48,25 +49,54 @@
                 background: linear-gradient(to bottom ,rgba(255,255,255,0.2),rgba(255,255,255,0.9));
             }
         }
-        &:hover
+
+    }
+    &__news
+    {
+        .item
         {
-            cursor: pointer;
-            .item-text
+            &:hover
             {
-                top: 0;
-                padding-top: 10px;
+                .item-text
+                {
+                    top: 0;
+                    padding-top: 10px;
+                }
+                .item_desc
+                {
+                    display: block;
+                }
+                .button
+                {
+                    display: inline-block;
+                }
             }
-            .item_desc
+        }
+    }
+    &__video
+    {
+        .item
+        {
+            .video_play
             {
+                position: absolute;
+                top: -175px;
+                left: 0;
                 display: block;
-            }
-            .button
-            {
-                display: inline-block;
+                text-align: center;
+                width: 100%;
+                i
+                {
+                    font-size: 150px;
+                    color: #fff;
+                    display: inline-block;
+                    &:hover
+                    {
+                        color: $main_color;
+                    }
+                }
             }
 
         }
     }
-
-
 }

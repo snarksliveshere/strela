@@ -1,0 +1,16 @@
+.video
+{
+    &.single
+    {
+        iframe
+        {
+            width: 100%;
+            min-height: 200px;
+            @include media-breakpoint-up(md)
+            {
+                min-height: 300px;
+            }
+        }
+
+    }
+}
