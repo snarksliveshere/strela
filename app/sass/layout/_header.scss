@@ -85,10 +85,37 @@
         }
         &-form
         {
-            position: absolute;
-            left: -170px;
-            top:50px;
-            display: none;
+            @include media-breakpoint-up(md)
+            {
+                position: absolute;
+                left: -170px;
+                top:50px;
+                display: none;
+            }
+            input:not([type=submit])
+            {
+                text-align: left;
+                padding: 5px 15px;
+                box-sizing: border-box;
+                width: 90%;
+                padding-right: 30px;
+                @include media-breakpoint-up(md)
+                {
+                    width:auto;
+                    padding-right: 15px;
+                }
+            }
+            button[type=submit]
+            {
+                @extend %button_border;
+                position: absolute;
+                top: 10px;
+                right: 21px;
+                @include media-breakpoint-up(md)
+                {
+                    display: none;
+                }
+            }
         }
         .wrap
         {
@@ -98,20 +125,6 @@
                 left:auto;
                 right: 7px;
             }
-
         }
-        input:not([type=submit])
-        {
-            text-align: left;
-            padding: 5px 15px;
-        }
-        input[type=submit]
-        {
-            display: none;
-        }
-
-
     }
-
-
 }

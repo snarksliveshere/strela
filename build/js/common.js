@@ -23,11 +23,13 @@ $(function() {
 
         // jsDesc: i see u menu
         var seeMenu = $('.iseeu_menu');
+        $('.header__search-form').clone().appendTo(seeMenu);
         $('.header__top .menu').clone().appendTo(seeMenu).removeClass('row');
         $('.header__menu .menu').clone().appendTo(seeMenu).removeClass('row');
-        $('.header__mobile-separator').click(function () {
+        $('.header__mobile-separator .mobile_click').click(function () {
            seeMenu.toggle();
         });
+
         // seeMenu.bind('click',function(){
         //     $(this).find('.menu').slideToggle();
         //     $(this).find('ul').not('.menu').slideUp();
@@ -49,6 +51,10 @@ $(function() {
                 $(this).find('ul:first').delay(200).stop().fadeOut();
             }
         );
+        // jsDesc: search form
+        $('.header__search-button').click(function () {
+            $('.header__search-form').toggle();
+        });
 
 
 
@@ -124,10 +130,7 @@ $(function() {
        buttons: ['close']
     });
 
-    // jsDesc: search form
-    $('.header__search-button').click(function () {
-        $('.header__search-form').toggle();
-    });
+
 
 
 });
