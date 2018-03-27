@@ -139,6 +139,20 @@
   height: 0;
   z-index: $z-index;
 }
+@mixin triangle_up($z-index:1,$color:$main_color,$btm:-15,$brd_transparent:10,$brd_solid:15) {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: #{$btm}px;
+  margin: 0 auto;
+  border: #{$brd_transparent}px solid transparent;
+  border-bottom: #{$brd_solid}px solid $color;
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: $z-index;
+}
 
 %hover-lia {
   background: $pale_blue_color;

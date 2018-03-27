@@ -20,9 +20,9 @@ $(function() {
         //         $(this).addClass('active').next($('.info div.tab')).addClass('active')
         //     }
         // });
-        // i see u menu
-        var seeMenu = $('.iseeu_menu');
 
+        // jsDesc: i see u menu
+        var seeMenu = $('.iseeu_menu');
         $('.header__top .menu').clone().appendTo(seeMenu).removeClass('row');
         $('.header__menu .menu').clone().appendTo(seeMenu).removeClass('row');
         $('.header__mobile-separator').click(function () {
@@ -40,6 +40,7 @@ $(function() {
         // end of i see u menu
     } // end of resize < 768
     else {
+        // jsDesc: main menu animation
         $('.main_menu .dropmenu').hover(
             function () {
                 $(this).find('ul:first').delay(200).stop().fadeIn();
@@ -81,6 +82,7 @@ $(function() {
 
     } // end of Resize > 768
 
+    // jsDesc: slick set
     $('.aside_slider').slick({
         dots: true,
         infinite: false,
@@ -121,5 +123,11 @@ $(function() {
     $(".fancybox").fancybox({
        buttons: ['close']
     });
+
+    // jsDesc: search form
+    $('.header__search-button').click(function () {
+        $('.header__search-form').toggle();
+    });
+
 
 });

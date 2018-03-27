@@ -43,7 +43,8 @@
     }
     &__top
     {
-    border-bottom: 3px solid $blue_color;
+        //border-bottom: 3px solid $blue_color;
+        @include border_gradient($side:-bottom,$first-color:$main_color,$second-color:$border-color-blue,$b-width:3,$direction:to right)
     }
     &__disclamer
     {
@@ -68,15 +69,48 @@
             font-size: 20px;
         }
     }
-    &_search
+    &__search
     {
-        a
+        position: relative;
+        &-button
         {
             @extend %block_shadow;
             display: inline-block;
             padding: 5px 10px;
             border-radius: 5px;
+            &:hover
+            {
+                cursor: pointer;
+            }
         }
+        &-form
+        {
+            position: absolute;
+            left: -170px;
+            top:50px;
+            display: none;
+        }
+        .wrap
+        {
+            &:after
+            {
+                @include triangle_up(2,#fff,-30,15,15);
+                left:auto;
+                right: 7px;
+            }
+
+        }
+        input:not([type=submit])
+        {
+            text-align: left;
+            padding: 5px 15px;
+        }
+        input[type=submit]
+        {
+            display: none;
+        }
+
+
     }
 
 

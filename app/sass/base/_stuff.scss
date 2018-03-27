@@ -27,14 +27,14 @@
         background: linear-gradient(to right, $main_color 1%, $border-color-blue 100%);
     }
 }
-@mixin border_gradient($first-color:$main_color,$second-color:$border-color-blue,$b-width:2,$direction:to right) {
-    border:#{$b-width}px solid $first-color;
+@mixin border_gradient($side:'',$first-color:$main_color,$second-color:$border-color-blue,$b-width:2,$direction:to right) {
+    border#{$side}:#{$b-width}px solid $first-color;
     border-image: linear-gradient($direction, $first-color 1%, $second-color 100%);
     border-image-slice: 1;
 }
 // Shadows
 %button_shadow {
-    box-shadow: 0px 10px 61px -10px rgba(47,128,237,0.3);
+    box-shadow: 0px 10px 61px 0 rgba(47,128,237,0.3);
 }
 %block_shadow {
     box-shadow: 2px 4px 59px 3px rgba(46,124,230,0.2);
