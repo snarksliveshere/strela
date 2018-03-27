@@ -37,13 +37,17 @@ a {
     @extend %text_block;
 }
 
-
+::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-image: -webkit-linear-gradient(#F5F5F5, #8A8A8A);
+}
 .table_wrapper {
     display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+
 }
 
 table {
