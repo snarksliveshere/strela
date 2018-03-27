@@ -166,7 +166,7 @@ i {
 }
 
 .button {
-    @include button;
+    @include button(#fff);
 }
 
 button.gradient {
