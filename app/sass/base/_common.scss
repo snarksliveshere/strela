@@ -1,0 +1,68 @@
+/*mixins*/
+@mixin sect-pad-y($py:30,$px:0,$pysm:60,$pxsm:0,$pymd:60,$pxmd:0,$pylg:80,$pxlg:0,$pyxl:80,$pxxl:0) {
+  padding:#{$py}px #{$px}px;
+  @include media-breakpoint-up(sm) {
+    padding:#{$pysm}px #{$pxsm}px;
+  }
+  @include media-breakpoint-up(md) {
+    padding:#{$pymd}px #{$pxmd}px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding:#{$pylg}px #{$pxlg}px;
+  }
+  //@include media-breakpoint-up(xl) {
+  //  padding:#{$pyxl}px #{$pxxl}px;
+  //}
+}
+
+@mixin elem-mar-y-30($my:30,$mx:0,$mysm:30,$mxsm:0,$mymd:30,$mxmd:0,$mylg:30,$mxlg:0,$myxl:30,$mxxl:0) {
+  margin:#{$my}px #{$mx}px;
+  @include media-breakpoint-up(sm) {
+    margin:#{$mysm}px #{$mxsm}px;
+  }
+  @include media-breakpoint-up(md) {
+    margin:#{$mymd}px #{$mxmd}px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin:#{$mylg}px #{$mxlg}px;
+  }
+  //@include media-breakpoint-up(xl) {
+  //  margin:#{$myxl}px #{$mxxl}px;
+  //}
+}
+
+@mixin elem-mar-b-40($mb:30,$mbsm:30,$mbmd:40,$mblg:40,$mbxl:40){
+  margin-bottom:#{$mb}px;
+  @include media-breakpoint-up(sm) {
+    margin-bottom:#{$mbsm}px;
+  }
+  @include media-breakpoint-up(md) {
+    margin-bottom:#{$mbmd}px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom:#{$mblg}px;
+  }
+  //@include media-breakpoint-up(xl) {
+  //  margin-bottom:#{$mbxl}px;
+  //}
+}
+
+/*stuff*/
+%black_shadow {
+    box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.3);
+}
+%white_shadow{
+    box-shadow: 0px 15px 30px -15px rgba(255,255,255,0.3);
+}
+%big_line{
+  display: block;
+  width: 60px;
+  height: 3px;
+}
+
+%sm_line{
+  display: block;
+  width: 30px;
+  height: 3px;
+}
+
