@@ -125,11 +125,46 @@ $(function() {
 
         ]
     });
+    $('.good_slider-main').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.good_slider-nav'
+    });
+    $('.good_slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.good_slider-main',
+        dots: false,
+        arrows: false,
+        focusOnSelect: true
+    });
 
     $(".fancybox").fancybox({
        buttons: ['close']
     });
 
+    // jsDesc: tabs good
+    $('.good_tabs .tabset li').click(function() {
+        var ind = $(this).index();
+        $(this).addClass('active gradient').siblings().removeClass('active gradient');
+        $('.good_tabs .tab').eq(ind).addClass('active').siblings().removeClass('active');
+    });
+
+    // jsDesc: - & + buttons in good
+    $('.minus').click(function () {
+        var $input = $(this).next();
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+    });
+    $('.plus').click(function () {
+        var $input = $(this).prev();
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+    });
 
 
 

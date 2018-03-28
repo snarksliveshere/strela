@@ -1,0 +1,44 @@
+.good
+{
+    &_count
+    {
+        &-num {
+            padding: 10px 5px;
+            font-size: 14px;
+            @include media-breakpoint-up(md) {
+                font-size: 18px;
+                padding:10px 25px;
+            }
+
+        }
+        .number
+        {
+            &>div,&>input
+            {
+                display: inline-block;
+                margin-right: 5px;
+            }
+            .minus,.plus
+            {
+                font-size: 40px;
+                vertical-align: sub;
+                &:hover
+                {
+                    cursor: pointer;
+                }
+            }
+            .plus
+            {
+                position: relative;
+                top: 3px;
+            }
+
+            &>input
+            {
+                width: 60px;
+            }
+
+        }
+
+    }
+}

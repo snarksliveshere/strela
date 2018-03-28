@@ -37,18 +37,23 @@ a {
     @extend %text_block;
 }
 
-
+::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-image: -webkit-linear-gradient(#F5F5F5, #8A8A8A);
+}
 .table_wrapper {
     display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+
 }
 
 table {
     border-collapse: collapse;
     font-family: $open_sans;
+    width: 100%;
 
     thead {
         tr {
@@ -68,16 +73,36 @@ table {
         font-size: 14px;
     }
 }
+.table_2col {
+    tr
+    {
+        td
+        {
+            &:last-child
+            {
+                text-align: right;
+            }
+
+        }
+
+    }
+}
+.table_zebra {
+    tr:nth-child(odd) {
+        background-color: $table_gray_color;
+    }
+}
 
 ul {
     list-style: none;
     padding-left: 0;
+    box-sizing: border-box;
 }
 
 .content {
     ul
     {
-        padding: 10px;
+        padding: 15px;
     }
     li {
         position: relative;
@@ -133,6 +158,7 @@ ul {
 .bottom_border-blue {
     border-bottom: 3px solid $main_color;
 }
+
 
 
 ul {
@@ -197,7 +223,9 @@ button.gradient {
 }
 .little_remark {
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 400;
+    color: $gray_text_color;
+
 }
 .posa {
     position: absolute;
@@ -254,4 +282,30 @@ button.gradient {
 }
 .pale_bg {
     background-color: $pale_blue_color;
+}
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.fz14 {
+    font-size: 14px;
+}
+.fz16 {
+    font-size: 16px;
+}
+.fz18 {
+    font-size: 18px;
+}
+.custom-control-label::before {
+    border:1px solid $main_color;
+    background: #ffffff;
+    top: 2px;
+}
+.w100p {
+    width: 100%;
+}
+.button-border {
+    @extend %button_border;
 }
