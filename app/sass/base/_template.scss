@@ -132,6 +132,7 @@ ul {
         margin: 0 auto;
     }
 }
+
 .underline {
     position: relative;
     &:after {
@@ -139,9 +140,20 @@ ul {
     }
 
 }
+.underline-white {
+
+    &:after {
+        background-color: #ffffff;
+    }
+}
 .half_line {
     &:after {
         width: 30px;
+    }
+}
+.underline-bottom-20 {
+    &:after {
+        bottom:-20px;
     }
 }
 
@@ -200,6 +212,9 @@ button.gradient {
 }
 .gradient {
     @extend %button_gradient;
+}
+.second_gradient {
+    @extend %menu_gradient;
 }
 
 .button-white {
@@ -275,6 +290,9 @@ button.gradient {
 .another_blue {
     color: $another_blue;
 }
+.white {
+    color: #fff;
+}
 .hover-tdn {
     &:hover {
         text-decoration: none;
@@ -315,4 +333,7 @@ button:hover{
     &:hover {
         cursor: pointer;
     }
+}
+.marg-b-70 {
+    margin-bottom: 70px;
 }

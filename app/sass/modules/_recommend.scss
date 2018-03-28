@@ -1,40 +1,4 @@
-/*для stuff*/
-/*%background_gradient{
-	background: linear-gradient(135deg, #20b8d6 0%, #2f80ed 100%);
-    color: $main_color;
-}*/
-
-/*common styles*/
-.line_sm{
-  position: relative;
-  &:after{
-      @extend %sm_line;
-      content:'';
-      background-color: #fff;
-      position: absolute;
-      bottom: -10px;
-      left: calc(50% - 15px);
-    }
-}
-.line_big{
-  position: relative;
-  &:after{
-      @extend %big_line;
-      content:'';
-      background-color: #fff;
-      position: absolute;
-      bottom: -10px;
-      left: calc(50% - 15px);
-    }
-}
-
-section.recommended_products{
-	@extend %button_gradient;
-}
-
-section.recommended_products{
-	@include sect-pad-y;
-
+.recommended_products{
 	.item{
 		img{
 			@extend %black_shadow;
@@ -42,9 +6,7 @@ section.recommended_products{
 			display: inline-block;
 		}
 	}
-
 	.title{
-		@include elem-mar-y-30;
 		position: relative;
 		line-height: 1;
 		font-weight: 700;
@@ -52,7 +14,6 @@ section.recommended_products{
 	}
 
 	.btn_more{
-		@include elem-mar-b-40;
 		@extend %white_shadow;
 		text-decoration: none;
 		background-color: transparent;
@@ -72,7 +33,6 @@ section.recommended_products{
 			color: $blue_color;
 		}
 	}
-
 	.more a{
 		font-size: 16px;
 		color: #fff;

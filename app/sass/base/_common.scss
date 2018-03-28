@@ -54,6 +54,7 @@
 %white_shadow{
     box-shadow: 0px 15px 30px -15px rgba(255,255,255,0.3);
 }
+// мне кажется, эти стили не нужны, уже они есть в template underline, half-line etc, если я правильно понимаю их назначение
 %big_line{
   display: block;
   width: 60px;
