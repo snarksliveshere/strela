@@ -1,0 +1,85 @@
+/*для stuff*/
+/*%background_gradient{
+	background: linear-gradient(135deg, #20b8d6 0%, #2f80ed 100%);
+    color: $main_color;
+}*/
+
+/*common styles*/
+.line_sm{
+  position: relative;
+  &:after{
+      @extend %sm_line;
+      content:'';
+      background-color: #fff;
+      position: absolute;
+      bottom: -10px;
+      left: calc(50% - 15px);
+    }
+}
+.line_big{
+  position: relative;
+  &:after{
+      @extend %big_line;
+      content:'';
+      background-color: #fff;
+      position: absolute;
+      bottom: -10px;
+      left: calc(50% - 15px);
+    }
+}
+
+section.recommended_products{
+	@extend %button_gradient;
+}
+
+section.recommended_products{
+	@include sect-pad-y;
+
+	.item{
+		img{
+			@extend %black_shadow;
+			max-width: 100%;
+			display: inline-block;
+		}
+	}
+
+	.title{
+		@include elem-mar-y-30;
+		position: relative;
+		line-height: 1;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	.btn_more{
+		@include elem-mar-b-40;
+		@extend %white_shadow;
+		text-decoration: none;
+		background-color: transparent;
+		border: 2px solid #fff;
+		display: block;
+		width: 170px;
+		height: 40px;
+		line-height: 36px;
+		border-radius: 5px;
+		box-sizing: border-box;
+		color: #fff;
+		font-weight: 700;
+		font-size: 18px;
+		&:hover{
+			background: #fff;
+			text-decoration: none;
+			color: $blue_color;
+		}
+	}
+
+	.more a{
+		font-size: 16px;
+		color: #fff;
+		border-bottom: 1px solid #fff;
+		&:hover{
+			text-decoration: none;
+			border: none;
+		}
+	}
+}
