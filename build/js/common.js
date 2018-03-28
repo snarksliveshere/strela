@@ -125,6 +125,20 @@ $(function() {
 
         ]
     });
+    $('.good_slider-main').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.good_slider-nav'
+    });
+    $('.good_slider-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.good_slider-main',
+        dots: false,
+        focusOnSelect: true
+    });
 
     $(".fancybox").fancybox({
        buttons: ['close']
