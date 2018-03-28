@@ -47,7 +47,7 @@
     border-radius: 8px;
 }
 %button_padding {
-    padding: 10px 30px;
+    padding: 10px 25px;
 }
 @mixin button($b_color:$main_color,$bg:#ffffff,$fz:18px,$fw:700) {
     @extend %button_padding;

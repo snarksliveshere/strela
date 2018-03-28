@@ -27,6 +27,7 @@ var path = {
     	html: 'app/html/*.html',
 		js: 'app/js/common.js',
 		style: 'app/sass/main.scss',
+		boot: 'app/sass/libs.scss',
 		img: 'app/img/**/*.*',
 		fonts: 'app/fonts/**/*.*'
 	},
@@ -64,11 +65,11 @@ gulp.task('css', function () {
 
 // сборка для bootstrap
 gulp.task('boot', function () {
-    gulp.src(path.src.style)
+    gulp.src(path.src.boot)
         .pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
+        .pipe(rename({ suffix: '.red', prefix : '' }))
         .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
         .pipe(gulp.dest(path.build.css)) //И в build
-        .pipe(browserSync.stream());
 });
 gulp.task('image:build', function () {
     gulp.src(path.src.img) //Выберем наши картинки

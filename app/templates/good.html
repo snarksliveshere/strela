@@ -2,13 +2,22 @@
 <div class="container">
     <div class="row pb-5">
        <div class="col-12 col-md-9">
-            <div class="row no-gutters content">
+            <div class="row content good">
                 <div class="col-md-5">
                     @@include('modules/good_slider.html')
                 </div>
                 <div class="col-md-7">
-                    @@include('modules/good_tab.html')
-                    @@include('modules/good_count.html')
+                    <div class="row">
+                        <div class="good_price text-center pale_bg opensans py-3 col-12">
+                            <span class="another_blue">Цена:</span><span class="fwb"> 450 руб.</span>
+                        </div>
+                        <div class="col-12 order-md-first">@@include('modules/good_tab.html')</div>
+                        <div class="col-12">@@include('modules/good_count.html')</div>
+                    </div>
+
+                </div>
+                <div class="col-12 text-center my-5">
+                    <div class="underline ta-center"></div>
                 </div>
                 <div class="col-12">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim libero nam nisi nulla odio quae,
@@ -18,14 +27,14 @@
                         labore laboriosam maxime molestias natus non praesentium quis saepe sint ut voluptates.
                         Cupiditate debitis fugiat sed similique ut.</p>
                 </div>
+                <div class="col-12">
+                    @@include('modules/good_similar.html')
+                </div>
             </div>
         </div>
         <div class="aside col-12 col-md-3 order-md-first">
             @@include('menu/left_menu.html')
             @@include('menu/left_block.html')
-        </div>
-        <div class="col-12">
-            @@include('modules/good_similar.html')
         </div>
     </div>
 </div>
