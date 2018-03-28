@@ -174,6 +174,17 @@ $(function() {
         $input.change();
     });
 
-
+    // form styling
+    // $('#mse2_filters select').styler({
+    //     selectSmartPositioning:false
+    // });
+    // // endof form styling
+    // if($('.toggle_me').length){
+    //     let toggle_me = $('.toggle_me');
+    //     toggle_me.click(function(){
+    //         $(this).parent().next().slideToggle();
+    //         $(this).toggleClass('click');
+    //     });
+    // }
 
 });
