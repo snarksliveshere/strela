@@ -140,9 +140,17 @@ $(function() {
         arrows: false,
         focusOnSelect: true
     });
-
+    // jsDesc: fancybox
     $(".fancybox").fancybox({
        buttons: ['close']
+    });
+
+    $('[data-event]').on('click',function() {
+        if ($(this).data('event') == 'fancy') {
+            $.fancybox.open({
+                src  : '#'+$(this).data('name'),
+            });
+        }
     });
 
     // jsDesc: tabs good

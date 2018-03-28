@@ -301,11 +301,18 @@ button.gradient {
 .custom-control-label::before {
     border:1px solid $main_color;
     background: #ffffff;
-    top: 2px;
 }
 .w100p {
     width: 100%;
 }
 .button-border {
     @extend %button_border;
+}
+button:hover{
+    cursor: pointer;
+}
+.hover-pointer {
+    &:hover {
+        cursor: pointer;
+    }
 }

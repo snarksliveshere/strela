@@ -28,9 +28,17 @@
         &.inner_pages
         {
             top: -47px;
+            @include media-breakpoint-up(md) {
+                position: relative;
+                top:auto;
+                right:auto;
+            }
+
         }
         @include media-breakpoint-up(md) {
-            position: static;
+            position: relative;
+            top:auto;
+            right:auto;
             background: $main_color;
             background: linear-gradient(135deg, $main_color 0%,#00a9f5 100%);
             border: none;
