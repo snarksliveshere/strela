@@ -41,16 +41,9 @@ a {
     width: 8px;
     background-image: -webkit-linear-gradient(#F5F5F5, #8A8A8A);
 }
-.table_wrapper {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
 
-}
-
-table {
+table
+{
     border-collapse: collapse;
     font-family: $open_sans;
     width: 100%;
@@ -73,25 +66,49 @@ table {
         font-size: 14px;
     }
 }
-.table_2col {
-    tr
+.table
+{
+    &_wrapper
     {
-        td
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    &_2col
+    {
+        tr
         {
-            &:last-child
+            td
             {
-                text-align: right;
+                &:last-child
+                {
+                    text-align: right;
+                }
+
             }
 
         }
+    }
+    &_zebra
+    {
+        tr:nth-child(odd) {
+            background-color: $table_gray_color;
+        }
+    }
+    &_catalog
+    {
+        tr
+        {
+            background: $table_gray_color;
+            border-bottom:1px solid #fff;
+        }
+    }
+}
 
-    }
-}
-.table_zebra {
-    tr:nth-child(odd) {
-        background-color: $table_gray_color;
-    }
-}
+
 
 ul {
     list-style: none;
@@ -216,6 +233,16 @@ button.gradient {
 .second_gradient {
     @extend %menu_gradient;
 }
+.complex-white-button {
+    @extend %complex_white_button;
+}
+.hover-gradient {
+    &:hover
+    {
+        @extend %button_gradient;
+        color: #fff;
+    }
+}
 
 .button-white {
     @include button;
@@ -230,6 +257,10 @@ button.gradient {
 .block-shadow {
     @extend %block_shadow;
 }
+.black_shadow {
+    @extend %black_shadow;
+}
+
 .button-after {
     @include button_after;
 }
@@ -242,6 +273,8 @@ button.gradient {
     color: $gray_text_color;
 
 }
+
+
 .posa {
     position: absolute;
 }

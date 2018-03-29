@@ -81,6 +81,42 @@
         @extend %button_border;
     }
 }
+%complex_white_button {
+    @extend %button_padding;
+    @extend %button_border;
+    text-align: center;
+    color: $main_color;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    position: relative;
+    &:before {
+        content:'';
+        position: absolute;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        top: -2px;
+        left: -2px;
+        display: block;
+        @extend %button_gradient;
+        @extend %button_border;
+    }
+    &:after
+    {
+        @extend %text_gradient;
+    }
+    &:hover
+    {
+        text-decoration: none;
+        @extend %button_gradient;
+        &:after
+        {
+            display: none;
+        }
+    }
+}
 //end of buttons
 
 
