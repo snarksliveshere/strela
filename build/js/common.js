@@ -55,37 +55,6 @@ $(function() {
         $('.header__search-button').click(function () {
             $('.header__search-form').toggle();
         });
-
-
-
-        // if (items_view_static > headWidth) {
-        //     offItems.addClass('mod_head');
-        //     mainTopMenu.addClass('hide');
-        // }
-        // else {
-        //     offItems.removeClass('mod_head');
-        //     mainTopMenu.removeClass('hide');
-        // }
-        //
-        // $(window).scroll(function () {
-        //     var items_view = $(this).scrollTop();
-        //     if (items_view > headWidth) {
-        //         offItems.addClass('mod_head');
-        //         mainTopMenu.addClass('hide');
-        //     }
-        //     else {
-        //         offItems.removeClass('mod_head');
-        //         mainTopMenu.removeClass('hide');
-        //     }
-        // });
-        // // tabs
-        // $('.info .tabset li').click(function () {
-        //     var ind = $(this).index();
-        //     $(this).addClass('active').siblings().removeClass('active');
-        //     $('.tab').eq(ind).addClass('active').siblings().removeClass('active');
-        // });
-
-
     } // end of Resize > 768
 
     // jsDesc: slick set
@@ -125,6 +94,44 @@ $(function() {
 
         ]
     });
+    $('.quarter_slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        adaptiveHeight: true,
+        prevArrow: $('.quarter_prev'),
+        nextArrow: $('.quarter_next'),
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+
+        ]
+    });
+
+
     $('.good_slider-main').slick({
         slidesToShow: 1,
         slidesToScroll: 1,

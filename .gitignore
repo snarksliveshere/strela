@@ -4,7 +4,6 @@
 /build/img/
 /build/*.html
 /build/css/main.css
-/build/css/fonts.css
 /build/css/bootstrap-4.0.0.min-old.css
-
-
+/build/css/fonts.css
+/build/catalog.html
