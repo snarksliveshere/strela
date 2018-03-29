@@ -337,3 +337,6 @@ button:hover{
 .marg-b-70 {
     margin-bottom: 70px;
 }
+.bg-gray {
+    @extend %gray_bg;
+}
