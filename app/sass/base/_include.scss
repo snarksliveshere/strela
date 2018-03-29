@@ -120,10 +120,6 @@
 }
 
 
-%color {
-  color: $main_color;
-}
-
 //Triangle
 @mixin triangle_down($z-index:1,$color:$main_color,$btm:-15,$brd_transparent:10,$brd_solid:15) {
   content: '';
@@ -156,4 +152,10 @@
 
 %hover-lia {
   background: $pale_blue_color;
+}
+%color {
+  color: $main_color;
+}
+%gray_bg {
+  background: $table_gray_color;
 }

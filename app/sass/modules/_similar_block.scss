@@ -7,12 +7,13 @@
            .item
            {
                border: 1px solid $pale_blue_color;
-               .price
-               {
-                   @include h3($pale_blue_color);
-               }
+
            }
 
         }
     }
+}
+.price
+{
+    @include h3($another_blue);
 }

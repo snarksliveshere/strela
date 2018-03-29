@@ -145,38 +145,225 @@
 <div class="container">
     <div class="row pb-5">
        <div class="col-12 col-md-9">
-            <div class="row no-gutters content">
-                <div class="col-12 col-md-6">
-                    <a href="/img/single-image.jpg" class="fancybox">
-                        <img src="/img/single-image.jpg" alt="photo" class="img-responsive">
-                    </a>
-                </div>
-                <div class="w-100"></div>
+            <div class="row no-gutters">
+                <!--<div class="col-12 filters">-->
+    <!--<div class="row">-->
+        <form action="/" method="get" class="filters__form col-12">
+            <div class="row">
                 <div class="col-12">
-                    <h2 class="h2 underline my-4">Новая модель ежедневника на полузакрытой пружине</h2>
-                    <p>Блокноты и ежедневники стали неотъемлемыми атрибутами делового человека. Блокноты используют для
-                        заметок, рецептов, учета финансов и планирования. Ежедневники предназначены для ведения записей,
-                        связанных с каждодневной деятельностью человека.</p>
-
-                    <p>В современном мире блокноты и ежедневники – это необычные записные книжки, а бизнес-инструменты.
-                        С помощью блокнота с логотипом можно недорого, но эффективно проинформировать целевую аудиторию
-                        о вашем предприятии, создать и продвинуть собственный бренд. Блокнот и ежедневник с логотипом −
-                        это стильный аксессуар, наличие которого не только ненавязчиво рекламирует, но и подчеркивает
-                        статус человека.</p>
-                    <ul>
-                        <li>Первый пункт</li>
-                        <li>Второй</li>
-                        <li>Третий</li>
-                        <li>Четвертый</li>
-                    </ul>
-                    <p class="remark">Блокноты и ежедневники стали неотъемлемыми атрибутами делового человека. Блокноты используют для заметок, рецептов, учета финансов и планирования. Ежедневники предназначены для ведения записей, связанных с каждодневной деятельностью человека.</p>
+                    <div class="row bg-gray filters__form-select py-2 another_blue fz14">
+                        <div class="col-auto">
+                            <label for="filter_material" class="filters__form-select-label mb-0">Материал <i class="fas fa-angle-down"></i></label>
+                            <select name="filter_material" id="filter_material">
+                                <option value="wood">Дерево</option>
+                                <option value="wool">Шерсть</option>
+                                <option value="silk">Шелк</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <label for="filter_color" class="filters__form-select-label mb-0">Цвет <i class="fas fa-angle-down"></i></label>
+                            <select name="filter_color" id="filter_color">
+                                <option value="white">Белый</option>
+                                <option value="green">Зеленый</option>
+                                <option value="black">Черный</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <label for="filter_brend" class="filters__form-select-label mb-0">Бренд <i class="fas fa-angle-down"></i></label>
+                            <select name="filter_brend" id="filter_brend">
+                                <option value="soils">Soils</option>
+                                <option value="nike">Nike</option>
+                                <option value="some">Some long long word</option>
+                            </select>
+                        </div>
+                        <div class="col text-right">
+                            <button type="reset"><i class="fas fa-times-circle"></i> Сбросить</button>
+                        </div>
+                        <div class="w-100 mb-2"></div>
+                        <div class="custom-control custom-checkbox ml-3">
+                            <input type="checkbox" name="checkbox-news" id="checkbox-news" class="custom-control-input">
+                            <label for="checkbox-news" class="custom-control-label">Новинки</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-3">
+                            <input type="checkbox" name="checkbox-sale" id="checkbox-sale" class="custom-control-input">
+                            <label for="checkbox-sale" class="custom-control-label">Sale</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-3">
+                            <input type="checkbox" name="checkbox-event" id="checkbox-event" class="custom-control-input">
+                            <label for="checkbox-event" class="custom-control-label">8 марта</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 d-none d-md-block">
-                    <a href="/" class="another_blue hover-tdn"><i class="fas fa-arrow-left"></i> Назад</a>
+                <div class="col-12 order-md-first text-right">
+                    <div class="position-relative d-inline-block sort">
+                        <label for="filter_price" class="filters__form-select-label mb-0">
+                        Сортировать <span class="another_blue">по цене</span> <i class="fas fa-angle-down another_blue"></i>
+                        </label>
+                        <select name="filter_price" id="filter_price">
+                            <option value="white">Цена по возрастанию</option>
+                            <option value="green">Цена по убыванию</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 mb-3 fz14">
+                    <span class="pale_bg p-1">Наличие <span class="fwb">(на складе)</span></span> <a href="#" class="pale_bg p-1"><i class="fas fa-times-circle"></i></a>
+                </div>
+            </div>
+        </form>
+    <!--</div>-->
+<!--</div>-->
+                <div class="col-12 catalog_list">
+    <div class="row no-gutters">
+        <div class="col-12 col-md-4 px-2 item mb-3">
+            <div class="col-12 black_shadow pb-3">
+                <a href="/" class="d-block tac my-4 ">
+                    <img class="d-inline-block img-responsive" src="/img/cap1.jpg" alt="photo">
+                </a>
+                <div class="item_text mb-4 ">
+                    <div class="item_head ttu fwb underline half_line">Бейсболка летняя текстиль</div>
+                </div>
+                <div class="catalog_dot my-3 ">
+                    <div class="dots active black"></div>
+                    <div class="dots green"></div>
+                    <div class="dots active red"></div>
+                    <div class="dots blue"></div>
+                </div>
+                <div class="table_wrapper">
+                    <table class="table_2col table_catalog">
+                        <tr>
+                            <td>Параметр 1</td>
+                            <td>Значение 1</td>
+                        </tr>
+                        <tr>
+                            <td>Параметр 2</td>
+                            <td>Значение 2</td>
+                        </tr>
+                        <tr>
+                            <td>Параметр 3</td>
+                            <td>Значение 3</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row no-gutters justify-content-between align-items-center  mt-3">
+                    <a class="complex-white-button col-7" href="/">В корзину</a>
+                    <div class="col-auto opensans price">450 руб.</div>
                 </div>
             </div>
         </div>
+        <div class="col-12 col-md-4 px-2 item mb-3">
+            <div class="col-12 black_shadow pb-3">
+                <a href="/" class="d-block tac my-4 ">
+                    <img class="d-inline-block img-responsive" src="/img/cap1.jpg" alt="photo">
+                </a>
+                <div class="item_text mb-4 ">
+                    <div class="item_head ttu fwb underline half_line">Бейсболка летняя текстиль</div>
+                </div>
+                <div class="catalog_dot my-3 ">
+                    <div class="dots active black"></div>
+                    <div class="dots green"></div>
+                    <div class="dots active red"></div>
+                    <div class="dots blue"></div>
+                </div>
+                <div class="table_wrapper">
+                    <table class="table_2col table_catalog">
+                        <tr>
+                            <td>Параметр 1</td>
+                            <td>Значение 1</td>
+                        </tr>
+                        <tr>
+                            <td>Параметр 2</td>
+                            <td>Значение 2</td>
+                        </tr>
+                        <tr>
+                            <td>Параметр 3</td>
+                            <td>Значение 3</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row no-gutters justify-content-between align-items-center  mt-3">
+                    <a class="complex-white-button col-7" href="/">В корзину</a>
+                    <div class="col-auto opensans price">450 руб.</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 px-2 item mb-3">
+            <div class="col-12 black_shadow pb-3">
+                <a href="/" class="d-block tac my-4 ">
+                    <img class="d-inline-block img-responsive" src="/img/cap1.jpg" alt="photo">
+                </a>
+                <div class="item_text mb-4 ">
+                    <div class="item_head ttu fwb underline half_line">Бейсболка летняя текстиль</div>
+                </div>
+                <div class="catalog_dot my-3 ">
+                    <div class="dots active black"></div>
+                    <div class="dots green"></div>
+                    <div class="dots active red"></div>
+                    <div class="dots blue"></div>
+                </div>
+                <div class="table_wrapper">
+                    <table class="table_2col table_catalog">
+                        <tr>
+                            <td>Параметр 1</td>
+                            <td>Значение 1</td>
+                        </tr>
+                        <tr>
+                            <td>Параметр 2</td>
+                            <td>Значение 2</td>
+                        </tr>
+                        <tr>
+                            <td>Параметр 3</td>
+                            <td>Значение 3</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row no-gutters justify-content-between align-items-center  mt-3">
+                    <a class="complex-white-button col-7" href="/">В корзину</a>
+                    <div class="col-auto opensans price">450 руб.</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 px-2 item mb-3">
+            <div class="col-12 black_shadow pb-3">
+                <a href="/" class="d-block tac my-4 ">
+                    <img class="d-inline-block img-responsive" src="/img/cap1.jpg" alt="photo">
+                </a>
+                <div class="item_text mb-4 ">
+                    <div class="item_head ttu fwb underline half_line">Бейсболка летняя текстиль</div>
+                </div>
+                <div class="catalog_dot my-3 ">
+                    <div class="dots active black"></div>
+                    <div class="dots green"></div>
+                    <div class="dots active red"></div>
+                    <div class="dots blue"></div>
+                </div>
+                <div class="table_wrapper">
+                    <table class="table_2col table_catalog">
+                        <tr>
+                            <td>Параметр 1</td>
+                            <td>Значение 1</td>
+                        </tr>
+                        <tr>
+                            <td>Параметр 2</td>
+                            <td>Значение 2</td>
+                        </tr>
+                        <tr>
+                            <td>Параметр 3</td>
+                            <td>Значение 3</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row no-gutters justify-content-between align-items-center  mt-3">
+                    <a class="complex-white-button col-7" href="/">В корзину</a>
+                    <div class="col-auto opensans price">450 руб.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
         <div class="aside col-12 col-md-3 order-md-first">
+            <div class="row">
             <div class="left_menu left-menu-gradient d-none d-md-block col-12 mb-3">
     <div class="left_menu-inner">
         <div class="col-12">
@@ -237,8 +424,8 @@
         </div>
     </div>
 </div>
+            </div>
         </div>
-
     </div>
 </div>
 <div class="footer">

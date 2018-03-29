@@ -1,0 +1,68 @@
+.filters
+{
+    @include media-breakpoint-up(md)
+    {
+        margin-top: -24px;
+    }
+
+    &__form
+    {
+        select
+        {
+            display: none;
+        }
+        button[type=reset]
+        {
+            @extend %gray_bg;
+        }
+        &-select
+        {
+            margin-left: 0;
+            margin-right: 0;
+            &-label
+            {
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
+.jq-selectbox
+{
+    position: relative;
+    &__select
+    {
+        display: none;
+    }
+    &__dropdown
+    {
+        display: none;
+        position: absolute;
+        text-align: left;
+        background: #fff;
+        z-index: 1;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        min-width: 150%;
+        @at-root .sort .jq-selectbox__dropdown
+        {
+            min-width: 100%;
+            font-size: 14px;
+        }
+
+        @extend %button_shadow;
+        li
+        {
+            color: $content_color;
+            padding:7px;
+            &:hover
+            {
+                cursor: pointer;
+                @extend %hover-lia;
+            }
+            
+        }
+    }
+
+}
