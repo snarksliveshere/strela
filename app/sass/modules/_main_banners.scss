@@ -1,12 +1,13 @@
 .top_banners{
 	background-color: #efefef;
 	img{
-		max-width: 100%;
-		min-height: 236px;
+		max-width: auto;
 	}
 	.list{
 		.banner_block{
 			position: relative;
+			overflow: hidden;
+			height: 236px;
 			.description{
 				position: absolute;
 				top: 30px;
