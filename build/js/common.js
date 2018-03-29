@@ -178,12 +178,43 @@ $(function() {
     $('.filters__form select').styler({
         selectSmartPositioning:false
     });
-    if($('.filters__form-select-label').length){
-        var toggle_me = $('.filters__form-select-label');
-        toggle_me.click(function(){
-            // $(this).next().find('jq-selectbox__dropdown').slideToggle();
+    if($('.filters__form').length){
+        var toggle_label = $('.filters__form-select-label');
+        var toggle_filter = $('.filters__form-button');
+
+        toggle_label.click(function(){
+            var icon = $(this).find('i');
+            var block = $(this).parent().siblings().find('.jq-selectbox__dropdown');
             $(this).parent().find('.jq-selectbox__dropdown').slideToggle();
-            // $(this).toggleClass('click');
+            block.each(function () {
+               if($(this).css('display') == 'block') {
+                   $(this).slideToggle();
+               }
+            });
+            if(icon.hasClass('fa-angle-down')) {
+                icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+            } else {
+                icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+            }
+        });
+
+        // jsDesc: кнопка фильтры на мобильной версии
+        toggle_filter.click(function () {
+            var block = $(this).next().find('.jq-selectbox__dropdown');
+            $(this).next().slideToggle();
+
+            block.each(function () {
+                if($(this).css('display') == 'block') {
+                    $(this).toggle();
+                }
+            });
+            var icon = $(this).find('i');
+            if(icon.hasClass('fa-angle-down')) {
+                icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+            } else {
+                icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+            }
+            $('.filters__form-sort').toggleClass('pt-5');
         });
     }
 
