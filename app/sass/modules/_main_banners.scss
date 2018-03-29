@@ -1,5 +1,5 @@
 .top_banners{
-	background-color: #efefef;
+	background-color: #fff;
 	img{
 		max-width: auto;
 	}
@@ -46,10 +46,9 @@
 	} 
 }
 
-@media (min-width: 576px) { }
-
 @media (min-width: 768px) { 
 	.top_banners{
+		background-color: #efefef;
 		.list{
 			.banner_block{
 				.description{
@@ -66,7 +65,3 @@
 		} 
 	}
 }
-
-@media (min-width: 992px) { }
-
-@media (min-width: 1200px) { }
