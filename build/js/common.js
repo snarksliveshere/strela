@@ -174,17 +174,17 @@ $(function() {
         $input.change();
     });
 
-    // form styling
-    // $('#mse2_filters select').styler({
-    //     selectSmartPositioning:false
-    // });
-    // // endof form styling
-    // if($('.toggle_me').length){
-    //     let toggle_me = $('.toggle_me');
-    //     toggle_me.click(function(){
-    //         $(this).parent().next().slideToggle();
-    //         $(this).toggleClass('click');
-    //     });
-    // }
+    //form styling
+    $('.filters__form select').styler({
+        selectSmartPositioning:false
+    });
+    if($('.filters__form-select-label').length){
+        var toggle_me = $('.filters__form-select-label');
+        toggle_me.click(function(){
+            // $(this).next().find('jq-selectbox__dropdown').slideToggle();
+            $(this).parent().find('.jq-selectbox__dropdown').slideToggle();
+            // $(this).toggleClass('click');
+        });
+    }
 
 });
