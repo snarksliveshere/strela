@@ -110,12 +110,54 @@
     &:hover
     {
         text-decoration: none;
+        cursor: pointer;
         @extend %button_gradient;
         &:after
         {
             display: none;
         }
     }
+}
+%complex_blue_button {
+    @extend %button_padding;
+    @extend %button_border;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    box-sizing: border-box;
+    position: relative;
+    padding:12px 25px;
+    top: -2px;
+    @extend %button_gradient;
+    &:hover
+    {
+        top: 0;
+        //@extend %button_padding;
+        text-decoration: none;
+        cursor: pointer;
+        &:before {
+            content:'';
+            position: absolute;
+            z-index: -1;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            top: -2px;
+            left: -2px;
+            display: block;
+            @extend %button_gradient;
+            @extend %button_border;
+        }
+        &:after
+        {
+            @extend %text_gradient;
+        }
+        background: #ffffff;
+        color: $main_color;
+    }
+
+
+
+
 }
 //end of buttons
 

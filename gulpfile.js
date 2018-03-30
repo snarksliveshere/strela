@@ -89,7 +89,7 @@ gulp.task('image:build', function () {
 });
 gulp.task('include-watch', ['fileinclude'], reload);
 gulp.task('clean', function (cb) {
-    rimraf('./build', cb);
+    rimraf('./build/img', cb);
 });
 gulp.task('default', ['fileinclude', 'css', 'image:build'], function () {
     // serve files from the build folder

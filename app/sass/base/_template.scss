@@ -236,6 +236,9 @@ button.gradient {
 .complex-white-button {
     @extend %complex_white_button;
 }
+.complex-blue-button {
+    @extend %complex_blue_button;
+}
 .hover-gradient {
     &:hover
     {
