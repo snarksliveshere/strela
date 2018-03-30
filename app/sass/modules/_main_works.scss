@@ -1,0 +1,52 @@
+.works_block{
+	.block_wrap{
+		position: relative;
+	}
+	.color_block{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+	}
+	i{
+		position: relative;
+	}
+	.item{
+		position: relative;
+		.img_block{
+			width: 100%;
+			background-color: #fff;
+			height: 70%;
+			position: absolute;
+			top: 50%;
+			margin-top: -25%;
+			@extend %black_light_shadow;
+		}
+		img{
+			display: inline;
+    		position: relative;
+    		width: 60%;
+		}
+	}
+}
+
+@media (min-width: 768px){
+	.works_block{
+		.color_block{
+			width: 70%;
+			left: 15%;
+		}
+	}
+}
+@media (min-width: 480px){
+	.works_block{
+		.item{
+			.img_block{
+				margin-top: -35%;
+			}
+			img{
+	    		width: 85%;
+			}
+		}
+	}
+}
