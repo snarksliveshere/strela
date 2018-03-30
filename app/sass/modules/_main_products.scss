@@ -5,6 +5,12 @@
 }
 .products_block{
 	background-color: #efefef;
+	a:hover{
+		text-decoration:none;
+	}
+	.product_list>div:focus{
+		outline: none;
+	}
 	.item{
 		background-color: #fff;
 		width: 270px;
