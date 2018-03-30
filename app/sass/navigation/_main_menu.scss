@@ -39,17 +39,16 @@
                 left: 0;
                 display: none;
                 float: left;
-                font-size: 14px;
                 padding: 0 0;
                 text-align: left;
                 z-index: 2;
                 width: 100%;
-
                 a
                 {
                     @include pad-equal($pymd:10,$pxmd:15);
                     color: #000;
                     text-align: left;
+                    font-weight: 400;
                     &:hover
                     {
                         @extend %hover-lia;

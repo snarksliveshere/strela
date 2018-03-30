@@ -208,10 +208,19 @@ ul {
     a
     {
         color: #000;
+        display: block;
+        padding: 5px 0;
         &:hover
         {
             text-decoration: none;
         }
+    }
+}
+.icon-menu {
+    cursor: pointer;
+    @include media-breakpoint-up(md)
+    {
+        display: none;
     }
 }
 i {

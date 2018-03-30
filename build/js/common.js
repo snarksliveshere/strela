@@ -1,5 +1,12 @@
 $(function() {
 
+    function changeIcon(icon) {
+        if(icon.hasClass('fa-angle-down')) {
+            icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+        } else {
+            icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+        }
+    }
     var mql = window.matchMedia('all and (max-width: 768px)');
 
     if (mql.matches) {
@@ -16,17 +23,29 @@ $(function() {
                seeMenu.toggle();
                $(this).remove();
         });
+        if($('.icon-menu').length) {
+            $('.icon-menu').click(function () {
+                $(this).next().slideToggle();
+                var icon = $(this).find('i');
+                changeIcon(icon);
+            });
+        }
 
-        // seeMenu.bind('click',function(){
-        //     $(this).find('.menu').slideToggle();
-        //     $(this).find('ul').not('.menu').slideUp();
-        // });
-        // $('.iseeu_menu .js_sub_toggle').click(function(e){
-        //     $(this).toggleClass('menu_handler');
-        //     $(this).parent().next('ul').slideToggle();
-        //     e.stopPropagation();
-        // });
-        // end of i see u menu
+        // jsDesc: кнопка фильтры на мобильной версии
+        var toggle_filter = $('.filters__form-button');
+        toggle_filter.click(function () {
+            var block = $(this).next().find('.jq-selectbox__dropdown');
+            $(this).next().slideToggle();
+
+            block.each(function () {
+                if($(this).css('display') == 'block') {
+                    $(this).toggle();
+                }
+            });
+            var icon = $(this).find('i');
+            changeIcon(icon);
+            $('.filters__form-sort').toggleClass('pt-5');
+        });
     } // end of resize < 768
     else {
         // jsDesc: main menu animation
@@ -174,7 +193,7 @@ $(function() {
     });
     if($('.filters__form').length){
         var toggle_label = $('.filters__form-select-label');
-        var toggle_filter = $('.filters__form-button');
+
 
         toggle_label.click(function(){
             var icon = $(this).find('i');
@@ -185,31 +204,7 @@ $(function() {
                    $(this).slideToggle();
                }
             });
-            if(icon.hasClass('fa-angle-down')) {
-                icon.removeClass('fa-angle-down').addClass('fa-angle-up');
-            } else {
-                icon.removeClass('fa-angle-up').addClass('fa-angle-down');
-            }
-        });
-
-        // jsDesc: кнопка фильтры на мобильной версии
-        toggle_filter.click(function () {
-            var block = $(this).next().find('.jq-selectbox__dropdown');
-            $(this).next().slideToggle();
-
-            block.each(function () {
-                if($(this).css('display') == 'block') {
-                    $(this).toggle();
-                }
-            });
-            var icon = $(this).find('i');
-            if(icon.hasClass('fa-angle-down')) {
-                icon.removeClass('fa-angle-down').addClass('fa-angle-up');
-            } else {
-                icon.removeClass('fa-angle-up').addClass('fa-angle-down');
-            }
-            $('.filters__form-sort').toggleClass('pt-5');
+            changeIcon(icon);
         });
     }
-
 });
