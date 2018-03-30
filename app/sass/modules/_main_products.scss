@@ -5,8 +5,12 @@
 }
 .products_block{
 	background-color: #efefef;
-	a:hover{
-		text-decoration:none;
+	a{
+		color: #000;
+		&:hover{
+			text-decoration:none;
+			color: #000;
+		}
 	}
 	.product_list>div:focus{
 		outline: none;
