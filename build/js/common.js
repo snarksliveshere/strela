@@ -9,15 +9,13 @@ $(function() {
         $('.header__top .menu').clone().appendTo(seeMenu).removeClass('row');
         $('.header__menu .menu').clone().appendTo(seeMenu).removeClass('row');
         $('.header__mobile-separator .mobile_click').click(function () {
-           // $('body').append($('<div class="veil"></div>'));
+           $('body').prepend($('<div class="veil"></div>'));
             seeMenu.toggle();
-            // seeMenu.wrap('<div class="veil"></div>');
         });
-        // $('.veil').click(function () {
-        //     //seeMenu.toggle();
-        //     // $(this).remove();
-        //     console.log('veil clicked');
-        // });
+        $('body').on('click','.veil',function () {
+               seeMenu.toggle();
+               $(this).remove();
+        });
 
         // seeMenu.bind('click',function(){
         //     $(this).find('.menu').slideToggle();
@@ -34,7 +32,7 @@ $(function() {
         // jsDesc: main menu animation
         $('.main_menu .dropmenu').hover(
             function () {
-                $(this).find('ul:first').delay(200).stop().fadeIn();
+                $(this).find('ul:first').fadeIn();
             },
             function () {
                 $(this).find('ul:first').delay(200).stop().fadeOut();

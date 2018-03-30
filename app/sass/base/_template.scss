@@ -134,10 +134,20 @@ ul {
     }
 }
 
-.ta-right {
-    text-align: right;
+.ta-right-2-center {
+    text-align: center;
     &:after {
         right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    @include media-breakpoint-up(md)
+    {
+        text-align: right;
+        &:after {
+            right: 0;
+            left: auto;
+        }
     }
 }
 
