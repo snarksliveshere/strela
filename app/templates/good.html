@@ -1,7 +1,7 @@
 @@include('breadcrumb.html')
 <div class="container">
     <div class="row pb-5">
-       <div class="col-12 col-md-9">
+       <div class="col-12 col-md-8 col-xl-9">
             <div class="row good">
                 <div class="col-md-5">
                     @@include('modules/good_slider.html')
@@ -29,14 +29,19 @@
                         labore laboriosam maxime molestias natus non praesentium quis saepe sint ut voluptates.
                         Cupiditate debitis fugiat sed similique ut.</p>
                 </div>
-                <div class="col-12">
-                    @@include('modules/good_similar.html')
-                </div>
+                <!--<div class="col-12">-->
+                    <!--@@include('modules/good_similar.html')-->
+                <!--</div>-->
             </div>
         </div>
-        <div class="aside col-12 col-md-3 order-md-first">
+       <div class="aside col-12 col-md-4 col-xl-3 order-md-first">
             @@include('menu/left_menu.html')
             <!--@@include('menu/left_block.html')-->
+        </div>
+
+       <div class="col-12">
+           <p>Мне это крайне не нравится - выходим за рабочую область</p>
+           @@include('modules/good_similar-alt.html')
         </div>
     </div>
 </div>

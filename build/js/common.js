@@ -7,7 +7,7 @@ $(function() {
             icon.removeClass('fa-angle-up').addClass('fa-angle-down');
         }
     }
-    var mql = window.matchMedia('all and (max-width: 768px)');
+    var mql = window.matchMedia('all and (max-width: 767px)');
 
     if (mql.matches) {
         // jsDesc: i see u menu
@@ -111,9 +111,16 @@ $(function() {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1240,
                 settings: {
                     slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
@@ -225,8 +232,6 @@ $(function() {
     });
     if($('.filters__form').length){
         var toggle_label = $('.filters__form-select-label');
-
-
         toggle_label.click(function(){
             var icon = $(this).find('i');
             var block = $(this).parent().siblings().find('.jq-selectbox__dropdown');
@@ -239,4 +244,9 @@ $(function() {
             changeIcon(icon);
         });
     }
+
+    // stuff
+    $('.return_false').click(function () {
+       return false;
+    });
 });

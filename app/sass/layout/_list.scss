@@ -29,16 +29,6 @@
             height: 50%;
             overflow: hidden;
             position: relative;
-            &:before
-            {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                top: 20%;
-                background: linear-gradient(to bottom ,rgba(255,255,255,0.2),rgba(255,255,255,0.9));
-            }
         }
     }
     &__services
