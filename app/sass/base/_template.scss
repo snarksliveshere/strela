@@ -378,3 +378,6 @@ button:hover{
 .bg-gray {
     @extend %gray_bg;
 }
+.smooth_black_shadow {
+    @extend %smooth_black_shadow;
+}

@@ -1,0 +1,24 @@
+.clients
+{
+    .item
+    {
+        height: 150px;
+        text-align: center;
+        z-index: 2;
+        position: relative;
+        &:before
+        {
+            display: inline-block;
+            content: '';
+            height: 50%;
+
+        }
+        img
+        {
+            display: inline-block;
+
+        }
+
+    }
+
+}
