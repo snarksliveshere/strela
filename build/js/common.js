@@ -3,32 +3,21 @@ $(function() {
     var mql = window.matchMedia('all and (max-width: 768px)');
 
     if (mql.matches) {
-        // $('#header-navigation .sub-arrow').click(function () {
-        //     $(this).next('ul').slideToggle();
-        // });
-        // // tabs
-        // var price_tab = $('.info .tab');
-        // var lng_price = price_tab.length;
-        // for (var i = 0; i < lng_price; i++) {
-        //     $('.tabset li').eq(i).after($('.info .tab').eq(i));
-        // }
-        // $('.info .tabset li').click(function () {
-        //     if ($(this).hasClass('active')) {
-        //         $(this).removeClass('active').next($('.info div.tab')).removeClass('active');
-        //     } else {
-        //         $('.info .tabset li, .info .tab').removeClass('active');
-        //         $(this).addClass('active').next($('.info div.tab')).addClass('active')
-        //     }
-        // });
-
         // jsDesc: i see u menu
         var seeMenu = $('.iseeu_menu');
         $('.header__search-form').clone().appendTo(seeMenu);
         $('.header__top .menu').clone().appendTo(seeMenu).removeClass('row');
         $('.header__menu .menu').clone().appendTo(seeMenu).removeClass('row');
         $('.header__mobile-separator .mobile_click').click(function () {
-           seeMenu.toggle();
+           // $('body').append($('<div class="veil"></div>'));
+            seeMenu.toggle();
+            // seeMenu.wrap('<div class="veil"></div>');
         });
+        // $('.veil').click(function () {
+        //     //seeMenu.toggle();
+        //     // $(this).remove();
+        //     console.log('veil clicked');
+        // });
 
         // seeMenu.bind('click',function(){
         //     $(this).find('.menu').slideToggle();
@@ -131,7 +120,6 @@ $(function() {
         ]
     });
 
-
     $('.good_slider-main').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -147,6 +135,7 @@ $(function() {
         arrows: false,
         focusOnSelect: true
     });
+
     // jsDesc: fancybox
     $(".fancybox").fancybox({
        buttons: ['close']

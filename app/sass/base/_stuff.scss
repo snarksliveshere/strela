@@ -154,12 +154,17 @@
         background: #ffffff;
         color: $main_color;
     }
-
-
-
-
 }
 //end of buttons
+
+%right-2-center {
+    text-align: center;
+    @include media-breakpoint-up(md)
+    {
+        text-align: right;
+    }
+}
+
 
 
 

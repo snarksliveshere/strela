@@ -357,6 +357,9 @@ button.gradient {
 .fz18 {
     font-size: 18px;
 }
+.fz30 {
+    font-size: 30px;
+}
 .custom-control-label::before {
     border:1px solid $main_color;
     background: #ffffff;
@@ -387,4 +390,15 @@ button:hover{
 .smooth_black_shadow {
     @extend %smooth_black_shadow;
 }
-
+.right-2-center {
+    @extend %right-2-center;
+}
+.veil {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0,0,0,0.2);
+}
