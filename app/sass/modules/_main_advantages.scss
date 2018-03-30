@@ -1,0 +1,38 @@
+.advantages_block{
+	.item{
+		.description{
+			font-size: 16px;
+			text-align: left;
+			font-weight: 600;
+		}
+		.img_block{
+			text-align: left;
+			&:after{
+				display: none;
+			}
+			img{
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) { 
+	.advantages_block{
+		.item{
+			.description{
+				font-size: 20px;
+				text-align: center;
+				&:after{
+					display: none;
+				}
+			}
+			.img_block{
+				text-align: center;
+				&:after{
+					display: block;
+				}
+			}
+		}
+	}
+}
