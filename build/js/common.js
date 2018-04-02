@@ -1,3 +1,14 @@
+// captcha
+// var onloadCallback = function() {
+//     mysitekey = '6Leq4jcUAAAAAK9o3wR7h_lpIMQvOQ2Kr2Ldr-00';
+//
+//     if($('#callback_g').length ){
+//         grecaptcha.render('callback_g', {
+//             'sitekey' : mysitekey
+//         });
+//     }
+// }
+
 $(function() {
 
     function changeIcon(icon) {

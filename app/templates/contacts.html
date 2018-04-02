@@ -1,0 +1,40 @@
+@@include('breadcrumb.html')
+<div class="container">
+    <div class="row pb-5">
+       <div class="col-12 col-md-8 col-xl-9">
+            <div class="row no-gutters content">
+                <div itemscope="" itemtype="http://schema.org/Organization">
+                    <h3 class="first_h3"><span itemprop="name">ООО "Голубая Стрела"</span></h3>
+
+                    <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                        <p>Юридический и фактический &nbsp;<span itemprop="addressLocality">г. Москва</span>,&nbsp;
+                            <span itemprop="streetAddress">Зельев переулок д. 11, 1 этаж, кабинет 111</span></p>
+                    </div>
+
+                    <p>ОГРН:&nbsp; 110774604260</p>
+
+                    <p><strong><span itemprop="telephone">(495) 585-08-90</span></strong></p>
+
+                    <p><strong><strong>Время работы:</strong> Понедельник-Пятница с 10:00 - 18:00, без перерыва на обед</strong>
+                    </p>
+
+                    <p><strong><strong>E-mail: </strong><span itemprop="email"><a href="mailto:g-strela@yandex.ru">g-strela@yandex.ru</a></span></strong>
+                    </p>
+
+                    <p><strong><strong>Адрес:</strong> Зельев переулок д. 11, 1 этаж, кабинет 111</strong></p>
+
+                    <p><strong>М. Преображенская Площадь.</strong></p>
+                </div>
+                @@include('modules/contact_form.html')
+                <div class="ya_map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99f9b688026d9e6ac6fe7c446b09a560c0991aae526bd1caf4f655014a50bae7&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+        </div>
+        <div class="aside col-12 col-md-4 col-xl-3 order-md-first">
+            @@include('menu/left_menu.html')
+            @@include('menu/left_block.html')
+        </div>
+
+    </div>
+</div>
