@@ -97,6 +97,7 @@ $(function() {
     // jsDesc: slick set
     $('.aside_slider').slick({
         dots: true,
+        autoplay: true,
         infinite: false,
         speed: 300,
         arrows: false,
@@ -133,6 +134,7 @@ $(function() {
     });
     $('.quarter_slider').slick({
         dots: false,
+        autoplay: true,
         infinite: true,
         speed: 300,
         adaptiveHeight: true,
@@ -174,6 +176,7 @@ $(function() {
     });
     $('.quarter_slider-works').slick({
         dots: false,
+        autoplay: true,
         infinite: true,
         speed: 300,
         adaptiveHeight: true,
