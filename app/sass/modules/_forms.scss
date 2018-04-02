@@ -51,6 +51,23 @@
                 background-color: transparent;
             }
         }
+        &-available
+        {
+            &>span
+            {
+                width: 85%;
+
+                @include media-breakpoint-up(md)
+                {
+                    width:auto;
+                }
+            }
+            a
+            {
+                padding: 6px;
+            }
+
+        }
         &-sort
         {
             @include media-breakpoint-up(md)
@@ -135,5 +152,11 @@
             }
         }
     }
-
+}
+.good_tags
+{
+    label
+    {
+        margin-top: 2px;
+    }
 }
