@@ -150,7 +150,16 @@ ul {
         }
     }
 }
-
+.ta-right-2-left {
+    @include media-breakpoint-up(md)
+    {
+        text-align: right;
+        &:after {
+            right: 0;
+            left: auto;
+        }
+    }
+}
 .ta-center {
     text-align: center;
     &:after {
