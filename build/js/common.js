@@ -46,6 +46,9 @@ $(function() {
             changeIcon(icon);
             $('.filters__form-sort').toggleClass('pt-5');
         });
+
+        // jsDesc: переносим корзину
+        $('.header__basket a').prependTo($('.header__mobile-separator'));
     } // end of resize < 768
     else {
         // jsDesc: main menu animation
@@ -249,4 +252,5 @@ $(function() {
     $('.return_false').click(function () {
        return false;
     });
+
 });

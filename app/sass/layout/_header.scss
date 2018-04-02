@@ -21,9 +21,6 @@
         padding: 5px 11px;
         border-radius: 8px;
         margin-left: 15px;
-        position: absolute;
-        top: -263px;
-        right: 35px;
         &.inner_pages
         {
             top: -47px;
@@ -95,6 +92,22 @@
         {
             box-shadow: -20px 2px 36px -4px rgba(47, 128, 237, 0.3);
             font-size: 20px;
+            text-align: center;
+            i
+            {
+                top:calc(50% - 16px);
+            }
+            .shopping
+            {
+                position: absolute;
+                left: -40px;
+                top:calc(50% - 16px);
+                .header__basket-count
+                {
+                    top: -4px;
+                    right:-7px;
+                }
+            }
         }
     }
     &__search
