@@ -7,6 +7,17 @@
 		height: 100%;
 		width: 100%;
 		left: 0;
+		@include media-breakpoint-up(md)
+		{
+			width: 70%;
+			left: 15%;
+		}
+		@include media-breakpoint-up(xl)
+		{
+			width: 40%;
+			left: 30%;
+		}
+
 	}
 	i{
 		position: relative;
@@ -30,14 +41,6 @@
 	}
 }
 
-@media (min-width: 768px){
-	.works_block{
-		.color_block{
-			width: 70%;
-			left: 15%;
-		}
-	}
-}
 @media (min-width: 480px){
 	.works_block{
 		.item{
