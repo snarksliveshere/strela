@@ -68,9 +68,15 @@ $(function() {
         // jsDesc: main menu animation
         $('.main_menu .dropmenu').hover(
             function () {
+                if($(this).parent().hasClass('submenu')) {
+                    $(this).find('a').eq(0).addClass('pale_bg');
+                }
                 $(this).find('ul:first').fadeIn();
             },
             function () {
+                if($(this).parent().hasClass('submenu')) {
+                    $(this).find('a').eq(0).removeClass('pale_bg');
+                }
                 $(this).find('ul:first').delay(200).stop().fadeOut();
             }
         );

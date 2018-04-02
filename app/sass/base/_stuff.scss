@@ -27,6 +27,12 @@
         background: linear-gradient(to right, $main_color 1%, $border-color-blue 100%);
     }
 }
+%clip_gradient {
+    background: linear-gradient(45deg, $another_blue 33%, $main_color 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $another_blue;
+}
 @mixin border_gradient($side:'',$first-color:$main_color,$second-color:$border-color-blue,$b-width:2,$direction:to right) {
     border#{$side}:#{$b-width}px solid $first-color;
     border-image: linear-gradient($direction, $first-color 1%, $second-color 100%);

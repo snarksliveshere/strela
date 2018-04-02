@@ -228,7 +228,7 @@ ul {
 
 
 i {
-    color: $main_color;
+    color: $another_blue;
 }
 
 .text_gradient {
@@ -242,7 +242,9 @@ i {
 .left-menu-gradient {
     @extend %left_menu_gradient;
 }
-
+.clip_gradient {
+    @extend %clip_gradient;
+}
 .button {
     @include button(#fff);
 }

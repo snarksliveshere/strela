@@ -77,6 +77,7 @@
     {
         font-size: 20px;
         color: $main_color;
+        font-weight: 800;
         @include media-breakpoint-up(md)
         {
             text-align: center;
@@ -87,6 +88,14 @@
         font-size: 14px;
         font-weight: 700;
         @include marg-top($mtmd:5);
+        &-phone
+        {
+            i
+            {
+                position: relative;
+                left: -10px;
+            }
+        }
     }
     &__mobile
     {

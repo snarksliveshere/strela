@@ -31,9 +31,16 @@
                         @extend %another_shadow;
                         z-index: 2;
                     }
-                    &:after
+
+                    &>a
                     {
-                        @include triangle_down(2,#fff,-30,15,15);
+                        position: relative;
+
+                        &:after
+                        {
+                            @include triangle_down(2,#fff,-30,15,15);
+                            z-index: 3;
+                        }
                     }
                 }
             }
