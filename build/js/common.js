@@ -18,6 +18,9 @@ $(function() {
             icon.removeClass('fa-angle-up').addClass('fa-angle-down');
         }
     }
+
+
+
     var mql = window.matchMedia('all and (max-width: 767px)');
 
     if (mql.matches) {
@@ -75,6 +78,19 @@ $(function() {
         $('.header__search-button').click(function () {
             $('.header__search-form').toggle();
         });
+        // jsDesc: icon menu для разрежений более 768
+        if($('.icon-menu').length) {
+            var iconMenu = $('.icon-menu');
+            iconMenu.find('i').removeClass('fa-angle-down').addClass('fa-angle-right');
+            iconMenu.click(function () {
+                if($(this).next().is(':visible')) {
+                    $(this).next().hide();
+                } else {
+                    $(this).next().show();
+                }
+
+            });
+        }
     } // end of Resize > 768
 
     // jsDesc: slick set

@@ -76,7 +76,28 @@
         }
     }
 }
-.submenu
-{
-    display: none;
+
+.icon-menu {
+    cursor: pointer;
+    @include media-breakpoint-up(md)
+    {
+        display: none;
+    }
+}
+.submenu .icon-menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top:12px;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    @include media-breakpoint-up(xl)
+    {
+        display: none;
+    }
+    i
+    {
+        color: $main_color;
+    }
 }
