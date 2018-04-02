@@ -21,6 +21,11 @@
             {
                 &:hover
                 {
+                    background-color: #fff;
+                    a
+                    {
+                        color: $main_color;
+                    }
                     &>.submenu
                     {
                         @extend %another_shadow;
@@ -68,11 +73,11 @@
             display: block;
             text-align: center;
 
-            &:hover
-            {
-                background-color: #fff;
-                color: $main_color;
-            }
+            //&:hover
+            //{
+            //    background-color: #fff;
+            //    color: $main_color;
+            //}
         }
     }
 }
