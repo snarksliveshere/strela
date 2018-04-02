@@ -2,7 +2,8 @@
 {
     &_count
     {
-        &-num {
+        &-num
+        {
             padding: 10px 5px;
             font-size: 14px;
             @include media-breakpoint-up(md) {
@@ -38,6 +39,14 @@
                 width: 60px;
             }
 
+        }
+        &-prices
+        {
+            color: $gray_text_color;
+            @include media-breakpoint-up(md)
+            {
+                color: #000;
+            }
         }
 
     }
