@@ -83,12 +83,13 @@ $(function() {
             var iconMenu = $('.icon-menu');
             iconMenu.find('i').removeClass('fa-angle-down').addClass('fa-angle-right');
             iconMenu.click(function () {
-                if($(this).next().is(':visible')) {
+                if($(this).hasClass('imclicked')) {
                     $(this).next().hide();
+                    $(this).removeClass('imclicked');
                 } else {
                     $(this).next().show();
+                    $(this).addClass('imclicked');
                 }
-
             });
         }
     } // end of Resize > 768
