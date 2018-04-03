@@ -292,11 +292,11 @@ $(function() {
         var icon = $(this).parents('.filters__form-modification').find('i');
         var name = $(this).parents('.filters__form-modification').find('.filters__form-select-label').text();
         changeIcon(icon);
-
+        var htmlBlock = $('<div class="d-inline-block mr-2 mb-2"><span class="pale_bg py-1 px-2 d-inline-block">' + name + '(<span class="fwb">'+ text +'</span>)</span><a href="#" class="ml-1 pale_bg filters__form-available-button"><i class="fas fa-times-circle"></i></a></div>');
         if($.inArray(text, filterName) == -1) {
             filterName.push(text);
-            var htmlBlock = $('<div class="d-inline-block mr-2 mb-2"><span class="pale_bg py-1 px-2 d-inline-block">' + name + '<span class="fwb">('+ text +')</span></span><a href="#" class="ml-1 pale_bg filters__form-available-button"><i class="fas fa-times-circle"></i></a></div>');
             htmlBlock.appendTo('.filters__form-available');
+            console.log(filterName);
         }
     });
     var filtersReset = $('.filters__form-reset button');
@@ -305,7 +305,14 @@ $(function() {
     });
     var filterRemove = $('.filters__form-available-button');
     body.on('click','.filters__form-available-button', function () {
+        var text = $(this).parent().find('.fwb').text();
+        console.log(text + ' text');
+        // if($.inArray(text, filterName) !== -1) {
+            filterName.splice($.inArray(text, filterName),1);
+        // }
+        console.log(filterName);
         $(this).parent().remove();
+
         return false;
     });
 
