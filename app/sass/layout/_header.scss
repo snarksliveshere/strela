@@ -22,13 +22,13 @@
         border-radius: 8px;
         margin-left: 15px;
         display: none;
-        &.inner_pages
+        &:hover
         {
-            top: -47px;
-            @include media-breakpoint-up(md) {
-                position: relative;
-                top:auto;
-                right:auto;
+            cursor: pointer;
+            background: $pale_blue_color;
+            i
+            {
+                color: $another_blue
             }
 
         }
@@ -45,6 +45,11 @@
                 color:#fff;
 
             }
+        }
+        &-wrap
+        {
+
+
         }
         &-count
         {
@@ -107,7 +112,7 @@
             {
                 top:calc(50% - 16px);
             }
-            .shopping
+            .header__basket-wrap
             {
                 position: absolute;
                 left: -40px;
@@ -117,7 +122,17 @@
                     top: -4px;
                     right:-7px;
                 }
+                .shopping__cart
+                {
+                    right: -50px;
+                    top: 50px;
+                    &:after
+                    {
+                        right: 44px;
+                    }
+                }
             }
+
         }
     }
     &__search

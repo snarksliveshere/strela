@@ -123,6 +123,11 @@
             display: none;
         }
     }
+    &.mini
+    {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
 }
 %complex_blue_button {
     @extend %button_padding;
@@ -159,6 +164,11 @@
         }
         background: #ffffff;
         color: $main_color;
+    }
+    &.mini
+    {
+        font-size: 14px;
+        padding: 8px 10px;
     }
 }
 //end of buttons

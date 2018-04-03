@@ -1,0 +1,24 @@
+//header__basket
+.shopping
+{
+    &__cart
+    {
+        display: none;
+        position: absolute;
+        background: #ffffff;
+        width: 300px;
+        right: 0;
+        top: 56px;
+        z-index: 2;
+        &:after
+        {
+            @include triangle_up(2,#fff,-30,15,15);
+            left:auto;
+            right: 7px;
+        }
+        &-char
+        {
+            font-weight: 400;
+        }
+    }
+}

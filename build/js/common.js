@@ -62,7 +62,7 @@ $(function() {
         });
 
         // jsDesc: переносим корзину
-        $('.header__basket a').prependTo($('.header__mobile-separator'));
+        $('.header__basket-wrap').prependTo($('.header__mobile-separator'));
     } // end of resize < 768
     else {
         // jsDesc: main menu animation
@@ -290,4 +290,8 @@ $(function() {
        return false;
     });
 
+    // jsDesc: basket
+    $('body').on('click','.shopping',function(){
+        $(this).next().toggle();
+    });
 });
