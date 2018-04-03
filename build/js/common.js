@@ -287,8 +287,7 @@ $(function() {
     var filterLi = $('.filters__form-select .jq-selectbox__dropdown li');
     var filterName = [];
     filterLi.click(function () {
-       var text = $(this).text();
-       console.log(text);
+        var text = $(this).text();
         var icon = $(this).parents('.filters__form-modification').find('i');
         var name = $(this).parents('.filters__form-modification').find('.filters__form-select-label').text();
         changeIcon(icon);
@@ -296,23 +295,17 @@ $(function() {
         if($.inArray(text, filterName) == -1) {
             filterName.push(text);
             htmlBlock.appendTo('.filters__form-available');
-            console.log(filterName);
         }
     });
     var filtersReset = $('.filters__form-reset button');
     filtersReset.click(function () {
         $('.filters__form-available .d-inline-block').remove();
+        filterName = [];
     });
-    var filterRemove = $('.filters__form-available-button');
     body.on('click','.filters__form-available-button', function () {
         var text = $(this).parent().find('.fwb').text();
-        console.log(text + ' text');
-        // if($.inArray(text, filterName) !== -1) {
-            filterName.splice($.inArray(text, filterName),1);
-        // }
-        console.log(filterName);
+        filterName.splice($.inArray(text, filterName),1);
         $(this).parent().remove();
-
         return false;
     });
 
