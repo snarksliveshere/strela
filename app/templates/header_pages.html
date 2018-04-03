@@ -44,8 +44,13 @@
                             <div class="little_remark opensans mt-2 posa">*Минимальная сумма заказа 5000 руб.</div>
                         </div>
                         <div class="col-auto header__basket inner_pages">
-                            <a href="/" class="shopping"><i class="fas fa-shopping-cart"></i></a>
-                            @@include('modules/cart.html')
+                            <div class="header__basket-wrap">
+                                <div class="shopping">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="header__basket-count">5</span>
+                                </div>
+                                @@include('modules/cart.html')
+                            </div>
                         </div>
                     </div>
                 </div>

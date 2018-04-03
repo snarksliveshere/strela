@@ -18,8 +18,7 @@ $(function() {
             icon.removeClass('fa-angle-up').addClass('fa-angle-down');
         }
     }
-
-
+    var body = $('body');
 
     var mql = window.matchMedia('all and (max-width: 767px)');
 
@@ -284,6 +283,28 @@ $(function() {
             changeIcon(icon);
         });
     }
+        // adding filter tags
+    var filterLi = $('.filters__form-select .jq-selectbox__dropdown li');
+    var filterName = [];
+    filterLi.click(function () {
+       var text = $(this).text();
+       console.log(text);
+        var icon = $(this).parents('.filters__form-modification').find('i');
+        var name = $(this).parents('.filters__form-modification').find('.filters__form-select-label').text();
+        changeIcon(icon);
+
+        if($.inArray(text, filterName) == -1) {
+            filterName.push(text);
+            var htmlBlock = $('<div class="d-inline-block mr-2 mb-2"><span class="pale_bg py-1 px-2 d-inline-block">' + name + '<span class="fwb">('+ text +')</span></span><a href="#" class="ml-1 pale_bg filters__form-available-button"><i class="fas fa-times-circle"></i></a></div>');
+            htmlBlock.appendTo('.filters__form-available');
+        }
+
+    });
+    var filterRemove = $('.filters__form-available-button');
+    body.on('click','.filters__form-available-button', function () {
+        $(this).parent().remove();
+        return false;
+    });
 
     // stuff
     $('.return_false').click(function () {
@@ -294,4 +315,5 @@ $(function() {
     $('body').on('click','.shopping',function(){
         $(this).next().toggle();
     });
+
 });
