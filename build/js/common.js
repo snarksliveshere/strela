@@ -298,7 +298,10 @@ $(function() {
             var htmlBlock = $('<div class="d-inline-block mr-2 mb-2"><span class="pale_bg py-1 px-2 d-inline-block">' + name + '<span class="fwb">('+ text +')</span></span><a href="#" class="ml-1 pale_bg filters__form-available-button"><i class="fas fa-times-circle"></i></a></div>');
             htmlBlock.appendTo('.filters__form-available');
         }
-
+    });
+    var filtersReset = $('.filters__form-reset button');
+    filtersReset.click(function () {
+        $('.filters__form-available .d-inline-block').remove();
     });
     var filterRemove = $('.filters__form-available-button');
     body.on('click','.filters__form-available-button', function () {
