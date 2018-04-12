@@ -12,34 +12,6 @@
             }
 
         }
-        .number
-        {
-            &>div,&>input
-            {
-                display: inline-block;
-                margin-right: 5px;
-            }
-            .minus,.plus
-            {
-                font-size: 40px;
-                vertical-align: sub;
-                &:hover
-                {
-                    cursor: pointer;
-                }
-            }
-            .plus
-            {
-                position: relative;
-                top: 3px;
-            }
-
-            &>input
-            {
-                width: 60px;
-            }
-
-        }
         &-prices
         {
             color: $gray_text_color;
@@ -49,5 +21,40 @@
             }
         }
 
+    }
+}
+.number
+{
+    &>div,&>input
+    {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .minus,.plus
+    {
+        font-size: 40px;
+        vertical-align: sub;
+        &:hover
+        {
+            cursor: pointer;
+        }
+    }
+    .plus
+    {
+        position: relative;
+        top: 3px;
+    }
+    &>input
+    {
+        width: 60px;
+    }
+    @at-root .cart .number input
+    {
+        width: 160px;
+        margin-right: 10px;
+        @include media-breakpoint-up(md)
+        {
+            width: 60px;
+        }
     }
 }

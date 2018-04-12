@@ -22,3 +22,27 @@
         }
     }
 }
+.cart
+{
+    .item
+    {
+        border-bottom:1px solid #ccc;
+        @include media-breakpoint-up(md)
+        {
+            border:1px solid #ccc;
+        }
+    }
+    &__cost {
+        @include media-breakpoint-up(md)
+        {
+            border-left:1px solid #ccc;
+        }
+        &-num
+        {
+            @include media-breakpoint-up(md)
+            {
+                border-bottom:1px solid #ccc;
+            }
+        }
+    }
+}

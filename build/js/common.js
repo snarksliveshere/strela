@@ -248,7 +248,8 @@ $(function() {
     $('.good_tabs .tabset li').click(function() {
         var ind = $(this).index();
         $(this).addClass('active gradient').siblings().removeClass('active gradient');
-        $('.good_tabs .tab').eq(ind).addClass('active').siblings().removeClass('active');
+        // $('.good_tabs .tab').eq(ind).addClass('active').siblings().removeClass('active');
+        $(this).parents('.good_tabs').find('.tab').eq(ind).addClass('active').siblings().removeClass('active');
     });
 
     // jsDesc: - & + buttons in good

@@ -245,8 +245,33 @@ i {
 .clip_gradient {
     @extend %clip_gradient;
 }
-.button {
-    @include button(#fff);
+.button
+{
+    @include button;
+    &-white
+    {
+        @include button;
+    }
+    &-blue
+    {
+        @include button($main_color, #fff);
+    }
+    &-shadow
+    {
+        @extend %button_shadow;
+    }
+    &-after
+    {
+        @include button_after;
+    }
+    &.gradient
+    {
+        @extend %button_gradient;
+        &:hover
+        {
+            color: inherit;
+        }
+    }
 }
 
 button.gradient {
@@ -272,16 +297,6 @@ button.gradient {
     }
 }
 
-.button-white {
-    @include button;
-}
-
-.button-blue {
-    @include button($main_color, #fff);
-}
-.button-shadow {
-    @extend %button_shadow;
-}
 .block-shadow {
     @extend %block_shadow;
 }
@@ -289,9 +304,6 @@ button.gradient {
     @extend %black_shadow;
 }
 
-.button-after {
-    @include button_after;
-}
 .black_color {
     color:#000;
 }

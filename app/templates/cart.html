@@ -2,32 +2,33 @@
 <div class="container">
     <div class="row pb-5">
         <div class="col-12 col-md-8 col-xl-9">
-
-            <div class="row good no-gutters">
-                <div class="col-12">
+            <div class="row cart no-gutters">
+                <div class="col-12 d-none d-md-block">
                     <div class="row">
-                        <div class="col-9 opensans fwb border py-3" >Товар</div>
-                        <div class="col-3 opensans fwb text-right border py-3">Количество</div>
+                        <div class="col-9 opensans fwb border py-3 text-center">Товар</div>
+                        <div class="col-3 opensans fwb text-center border py-3">Стоимость</div>
                     </div>
                 </div>
                 @@include('modules/cart_pages.html')
                 @@include('modules/cart_pages.html')
                 <div class="w-100"></div>
                 <div class="col-12 my-3">
-                    <div class="row justify-content-end">
-                        <div class="col-12 col-md-auto">
+                    <div class="row justify-content-md-between mb-3 align-items-md-center">
+                        <div class="col-12 col-md-auto mb-3">
                             <div class="pale_bg button">
                                 <div class="text-center fz18 content_color">Итого:</div>
                                 <div class="good_count-total button button-shadow content_color opensans">6800.12</div>
                             </div>
                         </div>
+                        <div class="col-12 col-md-3 order-md-first">
+                            <a href="order.html" class="complex-blue-button d-block">Оформить заказ</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="aside col-12 col-md-4 col-xl-3 order-md-first">
-            @@include('menu/left_menu.html')
+            @@include('menu/left_block.html')
         </div>
     </div>
 </div>
