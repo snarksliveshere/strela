@@ -8,7 +8,7 @@
                 <div class="col text-right py-2 py-md-0 order-md-last filters__form-reset">
                     <button type="reset"><i class="fas fa-times-circle"></i> Сбросить</button>
                 </div>
-                <div class="col-12 col-md-auto ml-md-3 filters__form-modification mb-3 mb-md-0 mt-1 mt-md-0">
+                <div class="col-md-auto ml-md-3 filters__form-modification mb-3 mb-md-0 mt-1 mt-md-0">
                     <label for="filter_material" class="filters__form-select-label pl-3 pl-md-0 mb-0">Материал <i
                             class="fas fa-angle-down"></i>
                     </label>
@@ -18,7 +18,7 @@
                         <option value="silk">Шелк</option>
                     </select>
                 </div>
-                <div class="col-12 col-md-auto ml-md-3 filters__form-modification mb-3 mb-md-0">
+                <div class="col-md-auto ml-md-3 filters__form-modification mb-3 mb-md-0">
                     <label for="filter_color" class="filters__form-select-label pl-3 pl-md-0 mb-0">Цвет <i
                             class="fas fa-angle-down"></i></label>
                     <select name="filter_color" id="filter_color">
@@ -27,7 +27,7 @@
                         <option value="black">Черный</option>
                     </select>
                 </div>
-                <div class="col-12 col-md-auto ml-md-3 filters__form-modification mb-3 mb-md-0">
+                <div class="col-md-auto ml-md-3 filters__form-modification mb-3 mb-md-0">
                     <label for="filter_brend" class="filters__form-select-label pl-3 pl-md-0 mb-0">Бренд <i
                             class="fas fa-angle-down"></i></label>
                     <select name="filter_brend" id="filter_brend">
@@ -36,7 +36,18 @@
                         <option value="some">Some long long word</option>
                     </select>
                 </div>
-
+                <div class="col-xl-7 mt-md-2 mt-xl-0  ml-md-3 filters__slider-wrap filters__form-modification mb-3 mb-md-0" id="slidecontainer">
+                    <div class="row px-3">
+                        <div class="col-md-5 col-lg-6 mb-3">
+                            <!--в data-min/max надо положить range цены, JS возьмет их отсюда -->
+                            <div class="filters__slider" data-min="14" data-max="458"></div>
+                        </div>
+                        <div class="col-md-7 col-lg-6">
+                            от <input type="text" class="fwb tac filters__slider-min d-inline-block mx-2" value=""/>
+                             до <input type="text" class="fwb tac filters__slider-max d-inline-block mx-2" value=""/> руб.
+                        </div>
+                    </div>
+                </div>
                 <div class="w-100 mb-md-2"></div>
                 <div class="custom-control good_tags col-12 col-md-auto pl-4 custom-checkbox ml-3">
                     <input type="checkbox" name="checkbox-news" id="checkbox-news" class="custom-control-input">

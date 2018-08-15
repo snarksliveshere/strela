@@ -301,4 +301,28 @@ $(function () {
     $('body').on('click', '.shopping', function () {
         $(this).next().toggle();
     });
+
+    var sliderFilter = $('.filters__slider');
+    var sliderMinPrice = sliderFilter.data('min');
+    var sliderMaxPrice = sliderFilter.data('max');
+    var percentQuoterPrice = (sliderMaxPrice - sliderMinPrice) /4;
+
+    $('.filters__slider-min').val(sliderMinPrice);
+    $('.filters__slider-max').val(percentQuoterPrice);
+
+
+    sliderFilter.slider({
+        min: sliderMinPrice,
+        max: sliderMaxPrice,
+        values: [sliderMinPrice,percentQuoterPrice],
+        range: true,
+        stop: function(event, ui) {
+            $(".filters__slider-min").val($(".filters__slider").slider("values",0));
+            $(".filters__slider-max").val($(".filters__slider").slider("values",1));
+        },
+        slide: function(event, ui){
+            $(".filters__slider-min").val($(".filters__slider").slider("values",0));
+            $(".filters__slider-max").val($(".filters__slider").slider("values",1));
+        }
+    });
 });
