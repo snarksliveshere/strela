@@ -8,69 +8,98 @@
         {
             a
             {
-                @include pad-equal;
+
             }
         }
         li
         {
             position: relative;
+
+        }
+
+     
+        
+        .submenu_wrap
+        {
+            position: absolute;
+            background-color: #eff5fd;
+            z-index: 2;
+            width: 100%;
+            transition: 0.5s;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+
+
+            & > ul
+            {
+                padding: 24px 30px;
+                position: relative;
+                column-width: 200px;
+                column-count: 5;
+                column-gap: 0;
+                width: 1110px;
+                display: block;
+                & > li
+                {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-bottom: 4px;
+                    width: 100%;
+                    padding-right: 15px;
+                }
+
+            }
         }
         .main_menu
         {
-            &>.dropmenu
+            position: relative;
+            & > li
             {
+                @include media-breakpoint-up(md)
+                {
+                    position: static;
+                }
+                & > a
+                {
+                    padding: 15px;
+                }
                 &:hover
                 {
-                    background-color: #fff;
-                    a
+                    & > div
                     {
-                        color: #000;
-                    }
-                    &>.submenu
-                    {
-                        @extend %another_shadow;
-                        z-index: 2;
-                    }
-
-                    &>a
-                    {
-                        position: relative;
-
-                        &:after
-                        {
-                            @include triangle_down(2,#fff,-30,15,15);
-                            z-index: 3;
-                        }
+                        height:auto;
+                        visibility: visible;
+                        opacity: 1;
                     }
                 }
             }
+
             .submenu
             {
-                position: absolute;
-                background: #ffffff;
-                left: 0;
-                display: none;
-                float: left;
-                padding: 0 0;
-                text-align: left;
-                z-index: 2;
-                width: 100%;
                 a
                 {
-                    @include pad-equal($pymd:10,$pxmd:15);
                     color: #000;
                     text-align: left;
                     font-weight: 400;
-                    &:hover
+
+                }
+                &_list
+                {
+                    a
                     {
-                        @extend %hover-lia;
+                        font-size: 13px;
                     }
                 }
-                .submenu
+                & > li
                 {
-                    left: 100%;
-                    top: 0;
+                    & > a
+                    {
+                        color: $main_color;
+                        font-size: 14px;
+                    }
                 }
+
             }
         }
         a
@@ -107,11 +136,3 @@
         color: $main_color;
     }
 }
-//.dropmenu
-//{
-//    z-index: 1;
-//    a
-//    {
-//        z-index: 1;
-//    }
-//}
