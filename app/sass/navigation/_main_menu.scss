@@ -94,8 +94,8 @@
 
                         &:after
                         {
-                            @include triangle_down(2,#fff,-30,15,15);
-                            z-index: 3;
+                            @include triangle_down(6,#fff,-30,15,15);
+
                         }
                     }
 
