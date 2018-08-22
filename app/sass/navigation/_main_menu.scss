@@ -77,29 +77,24 @@
                         opacity: 1;
                     }
                     background-color: #fff;
-                    & > a
-                    {
-                        color: #000;
-                    }
 
                     & > .submenu
                     {
                         @extend %another_shadow;
-                        z-index: 2;
+                        z-index: 6;
                     }
 
                     & > a
                     {
                         position: relative;
+                        color: #000;
 
                         &:after
                         {
-                            @include triangle_down(6,#fff,-30,15,15);
+                            @include triangle_down(7,#fff,-30,15,15);
 
                         }
                     }
-
-
                 }
             }
             li
